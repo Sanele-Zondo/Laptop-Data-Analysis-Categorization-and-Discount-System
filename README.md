@@ -358,6 +358,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 
 
 ```
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/304db48d3b2d7a6a7b02499fdddd482337910813/dashboard.png)
 
 ---
 
