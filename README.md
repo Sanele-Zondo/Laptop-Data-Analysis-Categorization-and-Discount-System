@@ -1,5 +1,12 @@
 # Laptop Data Analysis and Categorization Project
-
+<!-- The following information is hidden:
+    Database credentials, secrets, or other sensitive data.
+    'dbname': 'data_project',
+    'user': 'postgres',
+    'password': 'secretpassword',
+    'host': 'localhost',
+    'port': '5432'
+-->
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Data Collection](#data-collection)
