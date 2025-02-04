@@ -428,7 +428,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 ---
 
 ## 9. Descriptive Analytics
-*Details about challenges faced and solutions implemented during the project will be added here.*
+Understanding the Data
 
 ```python
    # 1.Total Number of Laptops
@@ -458,5 +458,76 @@ Potential Revenue: $106399.08
 ```
 ---
 ## 10. Business Questions (Analytical & Performance Evaluation)
+Revenue and Category Contribution:
+```python
+   # 1. What is the total potential revenue for each category?
+   def sum_by_col(df,col,values):
+       return df.groupby(col).agg({values:'sum'}).sort_values(by=values,ascending=True)
+   sum_by_col(data_cleaned,'Category','Prices_$')
+```
+```python
+   # 2. Which category contributes the most and least to overall potential revenue?
+   print('From Above anaysis:\nContributes Least to potential revenue-Education Category\nContributes High to potential revenue-Work Category')
+```
+From Above anaysis:
+Contributes Least to potential revenue-Education Category
+Contributes High to potential revenue-Work Category
+### Rating Analysis
+```python
+   # 1.What is the average rating for each category?
+   def ave_by_col(df,col,values):
+       return df.groupby(col).agg({values:'mean'}).sort_values(by=values,ascending=True)
+   ave_by_col(data_cleaned,'Category','Ratings')
+```
+```python
+   # 2 What is a maximum rating?
+   print(f'Maximum Rating: {data_cleaned['Ratings'].max()}')
+```
+```python
+   # 4.Which specific laptops in each category have the highest and lowest ratings?
+   data_cleaned.query('`Ratings`==1').groupby(['Category','Names']).min()
+   data_cleaned.query('`Ratings`==4').groupby(['Category','Names']).max()
+```
+### Revenue Optimization (Pricing Strategy)
+
+Impact of Discounts and Price Changes:
+```python
+# 1. What is the total revenue after applying all discounts and price increases?
+print(f'Potential Revenue After Price Changes : ${sum_total(data_cleaned['Discounted_Price_$'])}')
+```
+Potential Revenue After Price Changes : $95128.70000000001
+```python
+# 2. How does the total revenue after price changes compare to the original revenue?
+before_price_changes=sum_total(data_cleaned['Prices_$']).round(2)
+after_price_changes=sum_total(data_cleaned['Discounted_Price_$']).round(2)
+print(f'Potential Revenue Before Price Changes : $ {before_price_changes}')
+print(f'Potential Revenue After Price Changes : $ {after_price_changes}')
+change_in_price=before_price_changes-after_price_changes
+print(f'Change In Price:$ {change_in_price.round(2)}')
+```
+Potential Revenue Before Price Changes : $ 106399.08
+Potential Revenue After Price Changes : $ 95128.7
+Change In Price:$ 11270.38
+### Price Change Implications:
+```python
+#1. What are the implications of the price changes on overall revenue (e.g., profit margins)?
+print(f'Potential Revenue Decreased By:$ {change_in_price.round(2)}')
+```
+Potential Revenue Decreased By:$ 11270.38
+
+
+
+```python
+ 2.Changes in Price By Category
+category_before=sum_by_col(data_cleaned,'Category','Prices_$')
+category_after=sum_by_col(data_cleaned,'Category','Discounted_Price_$')
+#Join tables
+category_data=pd.merge(category_before,category_after,on='Category',how='inner')
+category_data
+#Get Change in Price
+category_data['Change_%']=((category_data['Discounted_Price_$']-category_data['Prices_$'])/category_data['Prices_$']*100).round(2)
+category_data.insert(0,'Category',category_data.index)
+```
+
 ## 9. Challenges and Solutions
 *Details about challenges faced and solutions implemented during the project will be added here.*
