@@ -268,14 +268,14 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 ```
 ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/9a1ac43c9f6bcb15ace4e9191d9cba13ee5c5aac/feature_engineering.png)
 ## 6. Applying Discounts
-*15% sales
+*Clearance sale of 15%
 ```python
    laptops_clearance_sale=data_cleaned.query("Operating_System in ['Windows 8.1', 'Win7 Pro 64bit', 'Window 8.1 Pro']")
    sale=laptops_clearance_sale['Prices_$'].apply(lambda x: x-x*0.15)
    laptops_clearance_sale.insert(2,'Discounted_Price_$',round(sale,2))
    laptops_clearance_sale
 ```
-*10% sales
+*Sale of 10% excluding products included in clearance sale
 ```python
    laptops_sale=data_cleaned.query("Operating_System not in ['Windows 8.1', 'Win7 Pro 64bit', 'Window 8.1 Pro'] ")
    sale=laptops_sale['Prices_$'].apply(lambda x: x-x*0.10)
@@ -287,7 +287,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
    data_cleaned=pd.concat([laptops_clearance_sale,laptops_sale],ignore_index=True)
    data_cleaned
 ```
-![image alt]()
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/ddbe816f0ac519a5d95e88fa0821224512be337c/afterDiscount.png)
 ---
 
 ## 7. Model Building
