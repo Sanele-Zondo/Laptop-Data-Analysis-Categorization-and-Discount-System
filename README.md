@@ -325,20 +325,8 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 ```markdown
    db_parameters = <!--
 {
-         'dbname': 'data_project', 
-         'user': 'postgres',
-         'password': 'Sanele',
-         'host': 'localhost',
-         'port': '5432'
-   }
--->
-<!-- The following information is hidden:
-    Database credentials, secrets, or other sensitive data.
-    'dbname': 'data_project',
-    'user': 'postgres',
-    'password': 'secretpassword',
-    'host': 'localhost',
-    'port': '5432'
+   Database credentials
+}
 -->
    try:
        connect = sql.connect(**db_parameters)
