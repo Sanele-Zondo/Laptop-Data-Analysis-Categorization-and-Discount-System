@@ -284,6 +284,31 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 
 ## 6. Model Building
 *Details about the categorization model and machine learning techniques used will be added here.*
+```python
+   #Prepare Data[Feature(X) and Target(y)]
+   X=data_cleaned_model[['ram_checker','price_checker','screen_size_checker','Graphics_Card_checker']]
+   y=data_cleaned_model['Category']
+   
+   #Split data into train and test:70-30 irrespectively
+   X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,train_size=0.8,random_state=42)
+   
+   #Build a model
+   tree=DecisionTreeClassifier()
+   
+   #Train Model
+   tree.fit(X_train,y_train)
+   
+   #Make Predictions
+   y_pred=tree.predict(X_test)
+   
+   #Evaluate The Model
+   accuracy=accuracy_score(y_test,y_pred)
+   print(f'Model Accuracy:\n{accuracy*100}%')
+   #Visualize The Model
+   plt.subplots(figsize=(15,10))
+   plot_tree(tree,filled=True,feature_names=['ram_checker','price_checker','screen_size_checker','Graphics_Card_checker'],class_names=['Education','Work','Gaming'])
+   plt.show()
+```
 
 ---
 
