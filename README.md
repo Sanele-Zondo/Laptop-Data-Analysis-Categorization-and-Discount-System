@@ -234,7 +234,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 
    *These extracted features were used for categorizing the laptops and applying further analysis.
    
-## 5. Categorize Data into Work, Gaming and Education:
+#### Categorize Data into Work, Gaming and Education:
    ```python
       def Graphics_Card_Checker(text):
           if text != 'Not Specified' and text !='3GB' and text !='4GB':
@@ -266,7 +266,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
          #Display Data
          data_cleaned
 ```
-![image alt]()
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/9a1ac43c9f6bcb15ace4e9191d9cba13ee5c5aac/feature_engineering.png)
 ## 6. Applying Discounts
 *15% sales
 ```python
