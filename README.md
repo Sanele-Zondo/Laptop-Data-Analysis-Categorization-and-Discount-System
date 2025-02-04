@@ -523,7 +523,7 @@ Potential Revenue Decreased By:$ 11270.38
 
 
 ```python
-#2.Changes in Price By Category
+#2.Changes in Price By Category?
 category_before=sum_by_col(data_cleaned,'Category','Prices_$')
 category_after=sum_by_col(data_cleaned,'Category','Discounted_Price_$')
 #Join tables
