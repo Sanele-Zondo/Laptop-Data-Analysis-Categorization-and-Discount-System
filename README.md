@@ -254,7 +254,7 @@ if __name__=='__main__':
         raw_data
       ```
       
-      iii.**Remove dollar sign($) to help us with changing data type**:
+      iii. **Remove dollar sign($) to help us with changing data type**:
    ```python
          raw_data['Prices']=raw_data['Prices'].str.replace('$','').str.strip()
          raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
