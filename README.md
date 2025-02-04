@@ -228,8 +228,39 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
    
 
    *These extracted features were used for categorizing the laptops and applying further analysis.
+## 5. Categorize Data into Work, Gaming and Education:
+   ```python
+      def Graphics_Card_Checker(text):
+          if text != 'Not Specified' and text !='3GB' and text !='4GB':
+              return 'Yes'
+          else:
+              return 'No'
+      def checker(price,Screen_Size,ram,graphics_card):
+          try:
+              if price <= 500 and ram<5 and Screen_Size <= 14:
+                  return 'Education'
+              elif price > 500 and ram >=8 and graphics_card !='Not Specified' and Screen_Size > 14:
+                  return 'Gaming'
+              else:
+                  return 'Work'
+          except Exception as e:
+              print(f'Error:{e}')
+              return 'Unknown'
+      data['ram_checker']=data['Ram'].str.extract(r'(.*)(?=GB)',expand=False).astype(float) 
+      data['price_checker']=data['Prices_$']
+      #Extract the Screen Size as float
+      data['screen_size_checker']=data['Screen_Size'].str.extract(r'(.*)(?=")',expand=False).astype(float)
+      #Check if it has graphic card
+      data['Graphics_Card_checker']=data['Graphics_Card'].apply(lambda x: Graphics_Card_Checker(x))
+      
+      #Categorize data
+      data['Category']=data.apply(lambda x: checker(x['price_checker'],x['screen_size_checker'],x['ram_checker'],x['Graphics_Card']),axis=1)
+      
+      data_cleaned=data[['Names','Prices_$','Screen_Size','Processor','Ram','Storage','Graphics_Card','Operating_System','Ratings','Reviews','Category']]
+      #Display Data
+      data_cleaned
 
-## 5. Applying Discounts
+## 6. Applying Discounts
 *Details about the discounting system will be added here.*
 
 ---
