@@ -317,7 +317,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
    plot_tree(tree,filled=True,feature_names=['ram_checker','price_checker','screen_size_checker','Graphics_Card_checker'],class_names=['Education','Work','Gaming'])
    plt.show()
 ```
-![image alt]()
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/7cfb4e7288a70c1234c09ec25e19355c063f5ab2/model.png)
 ---
 
 ## 8. Data Visualization
