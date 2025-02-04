@@ -166,7 +166,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
         outliers=raw_data[(raw_data['Prices_$']<lower_bound)|(raw_data['Prices_$']>upper_bound)]
         outliers
       ```
-       ![image alt]()
+       ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/45fbf7b35d014de32659f6b9658ff4dc3da42cad/outliers.png)
 ---
 #### After Data Cleaning
    ![image alt]()
