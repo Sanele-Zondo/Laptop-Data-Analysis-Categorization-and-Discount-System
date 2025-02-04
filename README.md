@@ -112,21 +112,19 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
          ```
    
       ii.**Fix Names that contains '...'**:
-
       ```python
-   
-           #Data containing '...'
-           data_with_dots=raw_data[raw_data['Names'].str.contains('...',regex=False)]
-           
-           data_with_dots['Names']=data_with_dots['Descriptions'].str.split(',',expand=True)[0]
-          
-           #Data Not Containing '...'
-            data_without_dots=raw_data[~raw_data['Names'].str.contains('...',regex=False)]
-           #Combine Data
-           raw_data=pd.concat([data_with_dots,data_without_dots],axis=0).sort_index(ascending=True)
-           raw_data
-         ```
-   
+        #Data containing '...'
+        data_with_dots=raw_data[raw_data['Names'].str.contains('...',regex=False)]
+        
+        data_with_dots['Names']=data_with_dots['Descriptions'].str.split(',',expand=True)[0]
+       
+        #Data Not Containing '...'
+         data_without_dots=raw_data[~raw_data['Names'].str.contains('...',regex=False)]
+        #Combine Data
+        raw_data=pd.concat([data_with_dots,data_without_dots],axis=0).sort_index(ascending=True)
+        raw_data
+      ```
+      
       iii.**Remove dollar sign($) to help us with changing data type**:
       ```python
          raw_data['Prices']=raw_data['Prices'].str.replace('$','').str.strip()
