@@ -186,8 +186,7 @@ if __name__=='__main__':
 
 ### Observations Before Cleaning and Transforming
 - **Incomplete Specifications**: Some laptop data may have missing or incomplete specifications.
-- **Product Descriptions**: Certain product descriptions may require regex extraction for proper categorization.
-- **Outliers or Invalid Price Entries**: The price column may contain outliers or invalid entries that need to be addressed.
+- **Outliers or Invalid Price Entries**: The price column may contain outliers that need to be addressed.
 
 ### Preprocessing Steps
 ### Loading and Viewing Data
