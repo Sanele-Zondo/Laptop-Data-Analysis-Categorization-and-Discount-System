@@ -105,68 +105,68 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
         print(f'{i}:{raw_data[i].nunique()}')
    
 4. ***Correcting Errors***:
-   -***Remove Whitespaces on column: Names***
-   ```python
-   raw_data['Names']=raw_data['Names'].str.strip()
+      -***Remove Whitespaces on column: Names***
+      ```python
+      raw_data['Names']=raw_data['Names'].str.strip()
+      
+      -***Fix Names that contains '...'***:
+      ```python
+        #Data containing '...'
+     data_with_dots=raw_data[raw_data['Names'].str.contains('...',regex=False)]
+     
+     data_with_dots['Names']=data_with_dots['Descriptions'].str.split(',',expand=True)[0]
+     #x=data_with_dots['Names'].str.contains('...',regex=False)
+     #Data Not Containing '...'
+     data_without_dots=raw_data[~raw_data['Names'].str.contains('...',regex=False)]
+     #Combine Data
+     raw_data=pd.concat([data_with_dots,data_without_dots],axis=0).sort_index(ascending=True)
+     raw_data
+      -***Remove dollar sign($) to help us with changing data type***:
+      ```python
+      raw_data['Prices']=raw_data['Prices'].str.replace('$','').str.strip()
+     raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
+     raw_data
    
-   -***Fix Names that contains '...'***:
-   ```python
-     #Data containing '...'
-  data_with_dots=raw_data[raw_data['Names'].str.contains('...',regex=False)]
-  
-  data_with_dots['Names']=data_with_dots['Descriptions'].str.split(',',expand=True)[0]
-  #x=data_with_dots['Names'].str.contains('...',regex=False)
-  #Data Not Containing '...'
-  data_without_dots=raw_data[~raw_data['Names'].str.contains('...',regex=False)]
-  #Combine Data
-  raw_data=pd.concat([data_with_dots,data_without_dots],axis=0).sort_index(ascending=True)
-  raw_data
-   -***Remove dollar sign($) to help us with changing data type***:
-   ```python
-   raw_data['Prices']=raw_data['Prices'].str.replace('$','').str.strip()
-  raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
-  raw_data
-
-5. **Remove Rows with Missing or Irrelevant Data**: 
-   - Any rows with missing values or duplicate laptop entries were removed to ensure clean and accurate data.
-
-6. **Standardize Columns**:
-   i. ***Ensuring consistent values***
-   ```python
-     raw_data['Names']=raw_data['Names'].str.title()
-   raw_data
-   ii. *** Fix Data Types***
-   ```python
-     data_types={
-      'Names': str
-      ,'Prices_$':float
-      ,'Descriptions':str
-  }
-  raw_data=raw_data.astype(data_types)
-  print(raw_data.dtypes)
-
-7. *Handle outliers
- ```python
-  Q1= raw_data['Prices_$'].quantile(0.25)
-  Q3= raw_data['Prices_$'].quantile(0.75)
-  
-  IQR= Q3-Q1
-  lower_bound=Q1-1.5*IQR
-  upper_bound=Q3+1.5*IQR
-  upper_bound
-  outliers=raw_data[(raw_data['Prices_$']<lower_bound)|(raw_data['Prices_$']>upper_bound)]
-  outliers
-
-### Regex Operations
-- **Regular Expressions** were used to extract relevant details from the "Descriptions" column. The extracted details include:
-  - **Screen_Size**
-  - **Processor**
-  - **Ram**
-  - **Storage**
-  - **Graphics_Card**
-  - **Operating_System**
-
-These extracted features were used for categorizing the laptops and applying further analysis.
+   5. **Remove Rows with Missing or Irrelevant Data**: 
+      - Any rows with missing values or duplicate laptop entries were removed to ensure clean and accurate data.
+   
+   6. **Standardize Columns**:
+      i. ***Ensuring consistent values***
+      ```python
+        raw_data['Names']=raw_data['Names'].str.title()
+      raw_data
+      ii. *** Fix Data Types***
+      ```python
+        data_types={
+         'Names': str
+         ,'Prices_$':float
+         ,'Descriptions':str
+     }
+     raw_data=raw_data.astype(data_types)
+     print(raw_data.dtypes)
+   
+   7. *Handle outliers
+    ```python
+     Q1= raw_data['Prices_$'].quantile(0.25)
+     Q3= raw_data['Prices_$'].quantile(0.75)
+     
+     IQR= Q3-Q1
+     lower_bound=Q1-1.5*IQR
+     upper_bound=Q3+1.5*IQR
+     upper_bound
+     outliers=raw_data[(raw_data['Prices_$']<lower_bound)|(raw_data['Prices_$']>upper_bound)]
+     outliers
+   
+   ### Regex Operations
+   - **Regular Expressions** were used to extract relevant details from the "Descriptions" column. The extracted details include:
+     - **Screen_Size**
+     - **Processor**
+     - **Ram**
+     - **Storage**
+     - **Graphics_Card**
+     - **Operating_System**
+   
+   These extracted features were used for categorizing the laptops and applying further analysis.
 
 ---
 
