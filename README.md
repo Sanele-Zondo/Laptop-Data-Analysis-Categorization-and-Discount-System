@@ -189,6 +189,7 @@ if __name__=='__main__':
 - **Outliers or Invalid Price Entries**: The price column may contain outliers that need to be addressed.
 - **Whitespaces**: Some columns may contain whitespaces that need to be addressed.
 - **Dollar Signs**:The price column contains dollar signs that need to be addressed.
+- **Unwanted data**:The name column may contain unwanted data (e.g '...') that need to be addressed.
 
 ### Preprocessing Steps
 ### Loading and Viewing Data
