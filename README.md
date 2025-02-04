@@ -691,7 +691,6 @@ category_data.insert(0,'Category',category_data.index)
 - The majority of laptops have a rating of **4**, which is beneficial for the business, as products with higher ratings are more likely to attract buyers.
 - Discount strategies seem to result in almost the same percentage change across all categories.
 - **Work laptops** contribute significantly more to the potential revenue compared to other categories.
-- The model-building process has demonstrated how automatic categorization can streamline decision-making regarding product grouping, enabling more efficient marketing and sales strategies.
 
 ## 12. Possible Recommendations:
 - Target high-value products for larger discounts to maximize sales impact.
