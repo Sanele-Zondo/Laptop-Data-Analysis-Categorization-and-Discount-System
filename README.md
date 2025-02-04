@@ -133,7 +133,9 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
          raw_data
       ```
 7. **Remove rows with missing or irrelevant data**: 
-      - Any rows with missing values or duplicate laptop entries were removed to ensure clean and accurate data.
+     ```python
+      raw_data.drop_duplicates(keep='first')
+     ```
    
 8. **Standardize Columns**:
       
