@@ -314,6 +314,49 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 
 ## 7. Data Visualization
 *Details about data visualization and insights will be added here.*
+```python
+   group=data_cleaned.groupby('Ratings').agg({'Names':'count'})
+   
+   x=group.index.values #Category
+   y=group.values.flatten()#Total in each Category
+   
+   #Create a Figure
+   fig, ax = plt.subplots(2,2,figsize=(10,6))
+   fig.suptitle('Dashboard',fontsize=15,fontweight=1)
+   
+   #Bar Plot
+   color=['cornflowerblue','midnightblue','lavender','lightBlue']
+   ax[0,0].barh(x,y,color=color,align='edge')
+   #Labels
+   ax[0,0].set_title('Distribution of Laptops Across Ratings', color='k',fontsize=None,loc='center')
+   ax[0,0].set_ylabel('ratings',color='k',fontsize=8)
+   ax[0,0].set_xlabel('Number Of Laptops',color='k',fontsize=8)
+   lis=range(1,5,1)
+   ax[0,0].set_yticks(lis, [x for x in lis])
+   
+   #Table
+   ax[0,1].axis('Off')
+   ax[0,1].table(colLabels=category_data.columns,cellText=category_data.values,loc='center',fontsize=15)
+   ax[0,1].set_title('Prices Before vs Prices After Discount and Percentage Change',fontsize=8)
+   
+   #Pie
+   xc=sum_by_col(data_cleaned,'Category','Prices_$')
+   color=['lightblue','cornflowerblue','lavender']
+   ax[1,0].pie(xc['Prices_$'],labels=xc.index,colors=color,autopct="%1.1f%%",startangle=270)
+   #Labes
+   ax[1,0].set_title("Price Distribution across Categories",color='k',fontsize=10)
+   
+   #Box And Whisckers
+   ax[1,1].boxplot(data_cleaned['Discounted_Price_$'],vert=False, patch_artist=True,notch=True)
+   ax[1,1].set_title("Identify Outliers After Price Changes",color='k',fontsize=10)
+   
+   #Display
+   plt.tight_layout()
+   plt.savefig('ratings.png')
+   plt.show()
+
+
+```
 
 ---
 
