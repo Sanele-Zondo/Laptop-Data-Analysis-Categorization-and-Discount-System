@@ -266,7 +266,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
          #Display Data
          data_cleaned
 ```
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/9a1ac43c9f6bcb15ace4e9191d9cba13ee5c5aac/feature_engineering.png)
+![image alt]()
 ## 6. Applying Discounts
 *Clearance sale of 15%
 ```python
