@@ -322,6 +322,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 ```python
 ## 5. Export Data (Excel And SQL)
 # SQL
+```markdown
    db_parameters = <!--
 {
          'dbname': 'data_project', 
