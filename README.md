@@ -282,7 +282,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 ```
 ---
 
-## 6. Model Building
+## 7. Model Building
 *Details about the categorization model and machine learning techniques used will be added here.*
 ```python
    #Prepare Data[Feature(X) and Target(y)]
@@ -312,7 +312,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 
 ---
 
-## 7. Data Visualization
+## 8. Data Visualization
 *Details about data visualization and insights will be added here.*
 ```python
    group=data_cleaned.groupby('Ratings').agg({'Names':'count'})
@@ -360,7 +360,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 
 ---
 
-## 8. Data Storage
+## 9. Data Storage
 ```python
 ## 5. Export Data (Excel And SQL)
 # SQL
@@ -426,6 +426,35 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 ```
 ---
 
+## 9. Descriptive Analytics
+*Details about challenges faced and solutions implemented during the project will be added here.*
+```python
+   # 1.Total Number of Laptops
+   def count(df):
+       return df.count()
+   print(f'There are {count(data_cleaned['Names'])} Laptops')
+```
+There are 117 Laptops
+```python
+   # 2.Potential Revenue
+   def sum_total(df):
+       return df.sum()
+   print(f'Potential Revenue: ${sum_total(data_cleaned['Prices_$']).round(2)}')
+   ```
+
+Potential Revenue: $106399.08
+```python
+   #3.Distribution by Operating System
+   def groupby_count(df,col,values):
+       return df.groupby(col).agg({values:'count'}).sort_values(by=values,ascending=True)
+   groupby_count(data_cleaned,'Operating_System','Names')
+   ```
+
+```python
+   # 4.Distribution by Category
+   groupby_count(data_cleaned,'Category','Names')
+```
+---
+## 10. Business Questions (Analytical & Performance Evaluation)
 ## 9. Challenges and Solutions
 *Details about challenges faced and solutions implemented during the project will be added here.*
-
