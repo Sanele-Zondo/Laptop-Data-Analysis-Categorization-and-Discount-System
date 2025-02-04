@@ -169,7 +169,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
        ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/45fbf7b35d014de32659f6b9658ff4dc3da42cad/outliers.png)
 ---
 #### After Data Cleaning
-   ![image alt]()
+   ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/c10eb561f093d6d28a7712e12bee6b4d22b4f02d/data_after_cleaning.png)
 ## 4. Feature Engineering
 ### Regex Operations
    - **Regular Expressions** were used to extract relevant details from the "Descriptions" column. The extracted details include:
@@ -233,6 +233,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
    
 
    *These extracted features were used for categorizing the laptops and applying further analysis.
+   
 ## 5. Categorize Data into Work, Gaming and Education:
    ```python
       def Graphics_Card_Checker(text):
