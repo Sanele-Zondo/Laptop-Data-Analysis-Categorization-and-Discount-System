@@ -407,7 +407,7 @@ if __name__=='__main__':
    laptops_clearance_sale.insert(2,'Discounted_Price_$',round(sale,2))
    laptops_clearance_sale
 ```
-*Sale of 10% excluding products included in clearance sale
+*Sale of 10% excluding products in clearance sale
 ```python
    laptops_sale=data_cleaned.query("Operating_System not in ['Windows 8.1', 'Win7 Pro 64bit', 'Window 8.1 Pro'] ")
    sale=laptops_sale['Prices_$'].apply(lambda x: x-x*0.10)
