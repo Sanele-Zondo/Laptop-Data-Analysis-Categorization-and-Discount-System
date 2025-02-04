@@ -87,47 +87,48 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 
    1. **Number of rows and columns**
    
-   ```python
-     print(f'(Rows,Columns)-->{raw_data.shape}')
+      ```python
+        print(f'(Rows,Columns)-->{raw_data.shape}')
 
    2. **Data Checks**
-   ```python
-     raw_data.dtypes
+      ```python
+        raw_data.dtypes
 
    
    iii. ***Identify Missing Values***
-   ```python
-     raw_data.info()
+      ```python
+        raw_data.info()
 
    iv. ***Understand the distinct values in each column***
-   ```python
-     for i in raw_data.columns:
+      ```python
+        for i in raw_data.columns:
         print(f'{i}:{raw_data[i].nunique()}')
    
-4. ***Correcting Errors***:
-      -***Remove Whitespaces on column: Names***
-      ```python
-      raw_data['Names']=raw_data['Names'].str.strip()
+4. **Correcting Errors**:
+      -**Remove Whitespaces on column: Names**:
+         ```python
+         raw_data['Names']=raw_data['Names'].str.strip()
       
-      -***Fix Names that contains '...'***:
-      ```python
-        #Data containing '...'
-     data_with_dots=raw_data[raw_data['Names'].str.contains('...',regex=False)]
-     
-     data_with_dots['Names']=data_with_dots['Descriptions'].str.split(',',expand=True)[0]
-     #x=data_with_dots['Names'].str.contains('...',regex=False)
-     #Data Not Containing '...'
-     data_without_dots=raw_data[~raw_data['Names'].str.contains('...',regex=False)]
-     #Combine Data
-     raw_data=pd.concat([data_with_dots,data_without_dots],axis=0).sort_index(ascending=True)
-     raw_data
-      -***Remove dollar sign($) to help us with changing data type***:
-      ```python
-      raw_data['Prices']=raw_data['Prices'].str.replace('$','').str.strip()
-     raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
-     raw_data
+      -**Fix Names that contains '...'**:
+         ```python
+           #Data containing '...'
+           data_with_dots=raw_data[raw_data['Names'].str.contains('...',regex=False)]
+           
+           data_with_dots['Names']=data_with_dots['Descriptions'].str.split(',',expand=True)[0]
+           #x=data_with_dots['Names'].str.contains('...',regex=False)
+           #Data Not Containing '...'
+           data_without_dots=raw_data[~raw_data['Names'].str.contains('...',regex=False)]
+           #Combine Data
+           raw_data=pd.concat([data_with_dots,data_without_dots],axis=0).sort_index(ascending=True)
+           raw_data
    
-   5. **Remove Rows with Missing or Irrelevant Data**: 
+      -**Remove dollar sign($) to help us with changing data type**:
+      ```python
+         raw_data['Prices']=raw_data['Prices'].str.replace('$','').str.strip()
+         raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
+         raw_data
+   
+   5. **Remove rows with missing or irrelevant data**: 
       - Any rows with missing values or duplicate laptop entries were removed to ensure clean and accurate data.
    
    6. **Standardize Columns**:
@@ -145,17 +146,17 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
      raw_data=raw_data.astype(data_types)
      print(raw_data.dtypes)
    
-   7. *Handle outliers
-    ```python
-     Q1= raw_data['Prices_$'].quantile(0.25)
-     Q3= raw_data['Prices_$'].quantile(0.75)
-     
-     IQR= Q3-Q1
-     lower_bound=Q1-1.5*IQR
-     upper_bound=Q3+1.5*IQR
-     upper_bound
-     outliers=raw_data[(raw_data['Prices_$']<lower_bound)|(raw_data['Prices_$']>upper_bound)]
-     outliers
+   7. ***Handle outliers***
+       ```python
+        Q1= raw_data['Prices_$'].quantile(0.25)
+        Q3= raw_data['Prices_$'].quantile(0.75)
+        
+        IQR= Q3-Q1
+        lower_bound=Q1-1.5*IQR
+        upper_bound=Q3+1.5*IQR
+        upper_bound
+        outliers=raw_data[(raw_data['Prices_$']<lower_bound)|(raw_data['Prices_$']>upper_bound)]
+        outliers
    
    ### Regex Operations
    - **Regular Expressions** were used to extract relevant details from the "Descriptions" column. The extracted details include:
