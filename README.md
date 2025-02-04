@@ -104,7 +104,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
         for i in raw_data.columns:
         print(f'{i}:{raw_data[i].nunique()}')
    
-4. **Correcting Errors**:
+5. **Correcting Errors**:
    
       i.**Remove Whitespaces on column: Names**:
          ```python
@@ -112,7 +112,9 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
          ```
    
       ii.**Fix Names that contains '...'**:
-         ```python
+
+      ```python
+   
            #Data containing '...'
            data_with_dots=raw_data[raw_data['Names'].str.contains('...',regex=False)]
            
@@ -131,10 +133,10 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
          raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
          raw_data
       ```
-   5. **Remove rows with missing or irrelevant data**: 
+   6. **Remove rows with missing or irrelevant data**: 
       - Any rows with missing values or duplicate laptop entries were removed to ensure clean and accurate data.
    
-   6. **Standardize Columns**:
+   7. **Standardize Columns**:
       
       i. **Ensuring consistent values**
       ```python
