@@ -165,7 +165,7 @@ if __name__=='__main__':
     """Parameters"""
     url = 'https://webscraper.io/test-sites/e-commerce/static/computers/laptops?page='
     number_of_pages = 21
-    save_directory='C:/Users/SaneleZondo/Documents/Becoming A Data Scientist/Data_ Project_1_Original/rawdata'
+    save_directory='C:/Users/SaneleZondo/Documents/Becoming A Data Scientist/Data_ Project_1_Original/data'
 
     scraper=Scraper_Data(url,number_of_pages)
     scraper.save_to_csv(save_directory)
