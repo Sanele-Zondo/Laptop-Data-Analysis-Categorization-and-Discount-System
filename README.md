@@ -1,5 +1,5 @@
 # Laptop Data Analysis and Categorization Project
-
+-![Image alt](#cover.gif)
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Data Collection](#data-collection)
