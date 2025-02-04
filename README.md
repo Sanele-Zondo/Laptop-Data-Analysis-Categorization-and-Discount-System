@@ -95,11 +95,11 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
         raw_data.dtypes
 
    
-   iii. ***Identify Missing Values***
+   3. ***Identify Missing Values***
       ```python
         raw_data.info()
 
-   iv. ***Understand the distinct values in each column***
+   4. ***Understand the distinct values in each column***
       ```python
         for i in raw_data.columns:
         print(f'{i}:{raw_data[i].nunique()}')
@@ -115,19 +115,19 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
            data_with_dots=raw_data[raw_data['Names'].str.contains('...',regex=False)]
            
            data_with_dots['Names']=data_with_dots['Descriptions'].str.split(',',expand=True)[0]
-           #x=data_with_dots['Names'].str.contains('...',regex=False)
+          
            #Data Not Containing '...'
-           data_without_dots=raw_data[~raw_data['Names'].str.contains('...',regex=False)]
+            data_without_dots=raw_data[~raw_data['Names'].str.contains('...',regex=False)]
            #Combine Data
            raw_data=pd.concat([data_with_dots,data_without_dots],axis=0).sort_index(ascending=True)
            raw_data
-   
+         ```
       -**Remove dollar sign($) to help us with changing data type**:
       ```python
          raw_data['Prices']=raw_data['Prices'].str.replace('$','').str.strip()
          raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
          raw_data
-   
+      ```
    5. **Remove rows with missing or irrelevant data**: 
       - Any rows with missing values or duplicate laptop entries were removed to ensure clean and accurate data.
    
