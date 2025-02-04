@@ -108,7 +108,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
       -**Remove Whitespaces on column: Names**:
          ```python
          raw_data['Names']=raw_data['Names'].str.strip()
-      
+         ```
       -**Fix Names that contains '...'**:
          ```python
            #Data containing '...'
@@ -132,10 +132,11 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
       - Any rows with missing values or duplicate laptop entries were removed to ensure clean and accurate data.
    
    6. **Standardize Columns**:
-      i. ***Ensuring consistent values***
+      i. **Ensuring consistent values**
       ```python
-        raw_data['Names']=raw_data['Names'].str.title()
-      raw_data
+         raw_data['Names']=raw_data['Names'].str.title()
+         raw_data
+      ```
       ii. *** Fix Data Types***
       ```python
         data_types={
@@ -145,7 +146,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
      }
      raw_data=raw_data.astype(data_types)
      print(raw_data.dtypes)
-   
+      ```
    7. ***Handle outliers***
        ```python
         Q1= raw_data['Prices_$'].quantile(0.25)
