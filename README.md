@@ -187,6 +187,8 @@ if __name__=='__main__':
 ### Observations Before Cleaning and Transforming
 - **Incomplete Specifications**: Some laptop data may have missing or incomplete specifications.
 - **Outliers or Invalid Price Entries**: The price column may contain outliers that need to be addressed.
+- **Whitespaces**: Some columns may contain whitespaces that need to be addressed.
+- **Dollar Signs**:The price column contains dollar signs that need to be addressed.
 
 ### Preprocessing Steps
 ### Loading and Viewing Data
