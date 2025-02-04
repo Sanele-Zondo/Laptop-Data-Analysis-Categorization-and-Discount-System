@@ -263,12 +263,12 @@ if __name__=='__main__':
          raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
          raw_data
       ```
-7. **Remove rows with missing or irrelevant data**: 
+6. **Remove rows with missing or irrelevant data**: 
      ```python
       raw_data.drop_duplicates(keep='first')
      ```
    
-8. **Standardize Columns**:
+7. **Standardize Columns**:
       
       i. **Ensuring consistent values**
       ```python
@@ -285,7 +285,7 @@ if __name__=='__main__':
            raw_data=raw_data.astype(data_types)
            print(raw_data.dtypes)
       ```
-   8. **Handle outliers**
+8. **Handle outliers**
        ```python
         Q1= raw_data['Prices_$'].quantile(0.25)
         Q3= raw_data['Prices_$'].quantile(0.75)
