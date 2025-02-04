@@ -165,9 +165,11 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
         upper_bound
         outliers=raw_data[(raw_data['Prices_$']<lower_bound)|(raw_data['Prices_$']>upper_bound)]
         outliers
-
+      ```
+       ![image alt]()
 ---
-
+#### After Data Cleaning
+   ![image alt]()
 ## 4. Feature Engineering
 ### Regex Operations
    - **Regular Expressions** were used to extract relevant details from the "Descriptions" column. The extracted details include:
@@ -263,6 +265,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
          #Display Data
          data_cleaned
 ```
+![image alt]()
 ## 6. Applying Discounts
 *15% sales
 ```python
@@ -283,6 +286,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
    data_cleaned=pd.concat([laptops_clearance_sale,laptops_sale],ignore_index=True)
    data_cleaned
 ```
+![image alt]()
 ---
 
 ## 7. Model Building
@@ -312,7 +316,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
    plot_tree(tree,filled=True,feature_names=['ram_checker','price_checker','screen_size_checker','Graphics_Card_checker'],class_names=['Education','Work','Gaming'])
    plt.show()
 ```
-
+![image alt]()
 ---
 
 ## 8. Data Visualization
@@ -439,6 +443,7 @@ Understanding the Data
        return df.count()
    print(f'There are {count(data_cleaned['Names'])} Laptops')
 ```
+
 There are 117 Laptops
 ```python
    # 2.Potential Revenue
@@ -454,11 +459,13 @@ Potential Revenue: $106399.08
        return df.groupby(col).agg({values:'count'}).sort_values(by=values,ascending=True)
    groupby_count(data_cleaned,'Operating_System','Names')
    ```
+![image alt]()
 
 ```python
    # 4.Distribution by Category
    groupby_count(data_cleaned,'Category','Names')
 ```
+![image alt]()
 ---
 ## 10. Business Questions (Analytical & Performance Evaluation)
 Revenue and Category Contribution:
@@ -468,6 +475,7 @@ Revenue and Category Contribution:
        return df.groupby(col).agg({values:'sum'}).sort_values(by=values,ascending=True)
    sum_by_col(data_cleaned,'Category','Prices_$')
 ```
+![image alt]()
 ```python
    # 2. Which category contributes the most and least to overall potential revenue?
    print('From Above anaysis:\nContributes Least to potential revenue-Education Category\nContributes High to potential revenue-Work Category')
@@ -488,11 +496,14 @@ Contributes High to potential revenue-Work Category
    # 2 What is a maximum rating?
    print(f'Maximum Rating: {data_cleaned['Ratings'].max()}')
 ```
+Maximum Rating: 4
 ```python
    # 4.Which specific laptops in each category have the highest and lowest ratings?
    data_cleaned.query('`Ratings`==1').groupby(['Category','Names']).min()
    data_cleaned.query('`Ratings`==4').groupby(['Category','Names']).max()
 ```
+![image alt]()
+![image alt]()
 ### Revenue Optimization (Pricing Strategy)
 
 Impact of Discounts and Price Changes:
