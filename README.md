@@ -628,8 +628,7 @@ Contributes High to potential revenue-Work Category
 ### Rating Analysis
 ```python
    # 1.What is the average rating for each category?
-   def ave_by_col(df,col,values):
-       return df.groupby(col).agg({values:'mean'}).sort_values(by=values,ascending=True)
+    #Call function:ave_by_col  
    ave_by_col(data_cleaned,'Category','Ratings')
 ```
 ```python
@@ -638,7 +637,7 @@ Contributes High to potential revenue-Work Category
 ```
 Maximum Rating: 4
 ```python
-   # 4.Which specific laptops in each category have the lowest ratings?
+   # 3.Which specific laptops in each category have the lowest ratings?
    data_cleaned.query('`Ratings`==1').groupby(['Category','Names']).min()
 ```
 ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/e81dc8e8d4cbd864fbd6ce4b568c6e0d2d136e6c/lowRating.png)
