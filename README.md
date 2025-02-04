@@ -595,6 +595,13 @@ Potential Revenue: $106399.08
    groupby_count(data_cleaned,'Category','Names')
 ```
 ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/e81dc8e8d4cbd864fbd6ce4b568c6e0d2d136e6c/distritutionByCategory.png)
+```python
+# 3. What is the average price for laptop in each category?
+def ave_by_col(df,col,values):
+    return df.groupby(col).agg({values:'mean'}).sort_values(by=values,ascending=True)
+ave_by_col(data_cleaned,'Category','Prices_$')
+```
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/e81dc8e8d4cbd864fbd6ce4b568c6e0d2d136e6c/distritutionByCategory.png)
 ---
 ## 10. Business Questions (Analytical & Performance Evaluation)
 Revenue and Category Contribution:
