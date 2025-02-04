@@ -261,8 +261,25 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
          data_cleaned
 ```
 ## 6. Applying Discounts
-*Details about the discounting system will be added here.*
-
+*15% sales
+```python
+   laptops_clearance_sale=data_cleaned.query("Operating_System in ['Windows 8.1', 'Win7 Pro 64bit', 'Window 8.1 Pro']")
+   sale=laptops_clearance_sale['Prices_$'].apply(lambda x: x-x*0.15)
+   laptops_clearance_sale.insert(2,'Discounted_Price_$',round(sale,2))
+   laptops_clearance_sale
+```
+*10% sales
+```python
+   laptops_sale=data_cleaned.query("Operating_System not in ['Windows 8.1', 'Win7 Pro 64bit', 'Window 8.1 Pro'] ")
+   sale=laptops_sale['Prices_$'].apply(lambda x: x-x*0.10)
+   laptops_sale.insert(2,'Discounted_Price_$',round(sale,2))
+   laptops_sale
+```
+-Combine Data:
+```python
+   data_cleaned=pd.concat([laptops_clearance_sale,laptops_sale],ignore_index=True)
+   data_cleaned
+```
 ---
 
 ## 6. Model Building
