@@ -361,16 +361,13 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 ---
 
 ## 8. Data Storage
-*Details about how data is stored in SQL and structured queries will be added here.*
 ```python
 ## 5. Export Data (Excel And SQL)
 # SQL
-```markdown
-   db_parameters = <!--
+   db_parameters =
 {
    Database credentials
 }
--->
    try:
        connect = sql.connect(**db_parameters)
        cursor  = connect.cursor()
