@@ -466,7 +466,7 @@ Potential Revenue: $106399.08
    # 4.Distribution by Category
    groupby_count(data_cleaned,'Category','Names')
 ```
-![image alt]()
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/e81dc8e8d4cbd864fbd6ce4b568c6e0d2d136e6c/distritutionByCategory.png)
 ---
 ## 10. Business Questions (Analytical & Performance Evaluation)
 Revenue and Category Contribution:
@@ -476,7 +476,7 @@ Revenue and Category Contribution:
        return df.groupby(col).agg({values:'sum'}).sort_values(by=values,ascending=True)
    sum_by_col(data_cleaned,'Category','Prices_$')
 ```
-![image alt]()
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/e81dc8e8d4cbd864fbd6ce4b568c6e0d2d136e6c/salesByCategory.png)
 ```python
    # 2. Which category contributes the most and least to overall potential revenue?
    print('From Above anaysis:\nContributes Least to potential revenue-Education Category\nContributes High to potential revenue-Work Category')
@@ -499,12 +499,15 @@ Contributes High to potential revenue-Work Category
 ```
 Maximum Rating: 4
 ```python
-   # 4.Which specific laptops in each category have the highest and lowest ratings?
+   # 4.Which specific laptops in each category have the lowest ratings?
    data_cleaned.query('`Ratings`==1').groupby(['Category','Names']).min()
+```
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/e81dc8e8d4cbd864fbd6ce4b568c6e0d2d136e6c/lowRating.png)
+```python
+   # 4.Which specific laptops in each category have the highest ratings?
    data_cleaned.query('`Ratings`==4').groupby(['Category','Names']).max()
 ```
-![image alt]()
-![image alt]()
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/e81dc8e8d4cbd864fbd6ce4b568c6e0d2d136e6c/highRating.png)
 ### Revenue Optimization (Pricing Strategy)
 
 Impact of Discounts and Price Changes:
