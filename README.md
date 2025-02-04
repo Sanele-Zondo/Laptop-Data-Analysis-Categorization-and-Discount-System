@@ -108,9 +108,9 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
    
       i.**Remove Whitespaces on column: Names**:
 
-      ```python
-         raw_data['Names']=raw_data['Names'].str.strip()
-         ```
+   ```python
+      raw_data['Names']=raw_data['Names'].str.strip()
+      ```
    
       ii.**Fix Names that contains '...'**:
       ```python
