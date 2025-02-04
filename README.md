@@ -1,12 +1,5 @@
 # Laptop Data Analysis and Categorization Project
-<!-- The following information is hidden:
-    Database credentials, secrets, or other sensitive data.
-    'dbname': 'data_project',
-    'user': 'postgres',
-    'password': 'secretpassword',
-    'host': 'localhost',
-    'port': '5432'
--->
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Data Collection](#data-collection)
@@ -329,13 +322,15 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 ```python
 ## 5. Export Data (Excel And SQL)
 # SQL
-   db_parameters = <!--{
+   db_parameters = <!--
+{
          'dbname': 'data_project', 
          'user': 'postgres',
          'password': 'Sanele',
          'host': 'localhost',
          'port': '5432'
-   }-->
+   }
+-->
    try:
        connect = sql.connect(**db_parameters)
        cursor  = connect.cursor()
