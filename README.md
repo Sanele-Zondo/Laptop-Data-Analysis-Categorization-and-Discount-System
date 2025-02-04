@@ -73,45 +73,45 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
       from sklearn.tree import plot_tree
       from sklearn.metrics import accuracy_score
    
--2. **Loading Data**:
+2. **Loading Data**:
    ```python
    read_csv = pd.read_csv('data.csv')
    raw_data=pd.DataFrame(read_csv)
----
--3. **Viewing Data**:
+
+3. **Viewing Data**:
    ```python
    raw_data.head(10)
----
 
--4. **Data Quality Checks**:
 
-  - 1. ***Number of rows and columns***
+4. **Data Quality Checks**:
+
+   1. **Number of rows and columns**
    
    ```python
      print(f'(Rows,Columns)-->{raw_data.shape}')
-   ---
-   2. ***Data Checks***
+
+   2. **Data Checks**
    ```python
      raw_data.dtypes
-   ---
+
    
    iii. ***Identify Missing Values***
    ```python
      raw_data.info()
----
-   
+
    iv. ***Understand the distinct values in each column***
    ```python
      for i in raw_data.columns:
         print(f'{i}:{raw_data[i].nunique()}')
    
 4. ***Correcting Errors***:
-   i. ***Remove Whitespaces on column: Names***
+   -***Remove Whitespaces on column: Names***
    ```python
-   raw_data['Names']=raw_data['Names'].str.strip()```
-   ii. ***2. Fix Names that contains '...'***
+   raw_data['Names']=raw_data['Names'].str.strip()
+   
+   -***Fix Names that contains '...'***:
    ```python
-     #Data Containing '...'
+     #Data containing '...'
   data_with_dots=raw_data[raw_data['Names'].str.contains('...',regex=False)]
   
   data_with_dots['Names']=data_with_dots['Descriptions'].str.split(',',expand=True)[0]
@@ -121,14 +121,16 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
   #Combine Data
   raw_data=pd.concat([data_with_dots,data_without_dots],axis=0).sort_index(ascending=True)
   raw_data
-   iii. ***Remove dollar sign($) to help us with changing data type***
+   -***Remove dollar sign($) to help us with changing data type***:
    ```python
    raw_data['Prices']=raw_data['Prices'].str.replace('$','').str.strip()
   raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
-  raw_data```
-4. **Remove Rows with Missing or Irrelevant Data**: 
+  raw_data
+
+5. **Remove Rows with Missing or Irrelevant Data**: 
    - Any rows with missing values or duplicate laptop entries were removed to ensure clean and accurate data.
-3. **Standardize Columns**:
+
+6. **Standardize Columns**:
    i. ***Ensuring consistent values***
    ```python
      raw_data['Names']=raw_data['Names'].str.title()
@@ -141,8 +143,9 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
       ,'Descriptions':str
   }
   raw_data=raw_data.astype(data_types)
-  print(raw_data.dtypes)```
-4. *Handle outliers
+  print(raw_data.dtypes)
+
+7. *Handle outliers
  ```python
   Q1= raw_data['Prices_$'].quantile(0.25)
   Q3= raw_data['Prices_$'].quantile(0.75)
@@ -152,7 +155,8 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
   upper_bound=Q3+1.5*IQR
   upper_bound
   outliers=raw_data[(raw_data['Prices_$']<lower_bound)|(raw_data['Prices_$']>upper_bound)]
-  outliers```
+  outliers
+
 ### Regex Operations
 - **Regular Expressions** were used to extract relevant details from the "Descriptions" column. The extracted details include:
   - **Screen_Size**
