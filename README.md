@@ -113,7 +113,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
       ```
    
       ii.**Fix Names that contains '...'**:
-      ```python
+   ```python
         #Data containing '...'
         data_with_dots=raw_data[raw_data['Names'].str.contains('...',regex=False)]
         
@@ -127,7 +127,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
       ```
       
       iii.**Remove dollar sign($) to help us with changing data type**:
-      ```python
+   ```python
          raw_data['Prices']=raw_data['Prices'].str.replace('$','').str.strip()
          raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
          raw_data
@@ -429,6 +429,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 
 ## 9. Descriptive Analytics
 *Details about challenges faced and solutions implemented during the project will be added here.*
+
 ```python
    # 1.Total Number of Laptops
    def count(df):
