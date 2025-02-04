@@ -76,18 +76,19 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 2. **Loading Data**:
    ```python
    read_csv = pd.read_csv('data.csv')
-   raw_data=pd.DataFrame(read_csv)```
+   raw_data=pd.DataFrame(read_csv)
 3. **Viewing Data**:
    ```python
-   raw_data.head(10)```
+   raw_data.head(10)
 
 4. **Data Quality Checks**:
-   i. ***Number of rows and columns***
+
+   1. ***Number of rows and columns***
    
    ```python
      print(f'(Rows,Columns)-->{raw_data.shape}')
    
-   ii. ***Data Checks***
+   2. ***Data Checks***
    ```python
      raw_data.dtypes
    
