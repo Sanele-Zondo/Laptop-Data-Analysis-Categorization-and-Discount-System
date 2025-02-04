@@ -460,7 +460,7 @@ Potential Revenue: $106399.08
        return df.groupby(col).agg({values:'count'}).sort_values(by=values,ascending=True)
    groupby_count(data_cleaned,'Operating_System','Names')
    ```
-![image alt]()
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/0e5943a33152374c3c276ae5f05aa724c22e8e4d/byOS.png)
 
 ```python
    # 4.Distribution by Category
