@@ -131,10 +131,10 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
          raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
          raw_data
       ```
-   6. **Remove rows with missing or irrelevant data**: 
+6. **Remove rows with missing or irrelevant data**: 
       - Any rows with missing values or duplicate laptop entries were removed to ensure clean and accurate data.
    
-   7. **Standardize Columns**:
+7. **Standardize Columns**:
       
       i. **Ensuring consistent values**
       ```python
