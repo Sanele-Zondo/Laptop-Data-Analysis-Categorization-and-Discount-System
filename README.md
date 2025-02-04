@@ -162,8 +162,11 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
         upper_bound
         outliers=raw_data[(raw_data['Prices_$']<lower_bound)|(raw_data['Prices_$']>upper_bound)]
         outliers
-   
-   ### Regex Operations
+
+---
+
+## 4. Feature Engineering
+### Regex Operations
    - **Regular Expressions** were used to extract relevant details from the "Descriptions" column. The extracted details include:
      - **Screen_Size**
      - **Processor**
@@ -171,15 +174,60 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
      - **Storage**
      - **Graphics_Card**
      - **Operating_System**
+     ```python
+        def search_text(text):
+       pattern=re.compile(r'''
+                           ([\d]*"[^,]*|[\d]+[\.][\d]+"[^,]*)
+                           [\,\s]*
+                          ([^,]+)
+                          [\,\s]*
+                          ([\d]{1,2}GB[^,]*)
+                          [\,\s]*
+                          ([\d]{2,}GB[^,]*|[\d]{1,2}TB[^,]*)
+                          [\,\s]*
+                          ([\d]*GB[^,]*|GTX[^,]*|Radeon[^,]*|NVIDIA[^,]*|GeForce[^,]*|Intel[^,]*)?
+                          [\,\s]*
+                          (DOS[^,]*?|Win[^,]*|Linux[^,]*?|Iris[^,]*?|Endless OS[^,]*?|No OS[^,]*?|FreeDOS[^,]*?)?'''
+                          , re.VERBOSE
+                         )
+       match=pattern.search(text)
+       if match:
+           screen_size=match.group(1)
+           processor=match.group(2)
+           ram=match.group(3)
+           storage=match.group(4)
+           graphics_card=match.group(5)
+           operating_system=match.group(6)
+           data={
+               'Screen_Size':screen_size
+               ,'Processor':processor
+               ,'Ram':ram
+               ,'Storage':storage
+               ,'Graphics_Card':graphics_card
+               ,'Operating_System':operating_system
+               
+           }
+       
+           return data
+       else:
+           return None
+           
+   data_dictionary=raw_data['Descriptions'].apply(lambda x :search_text(x))
    
-   These extracted features were used for categorizing the laptops and applying further analysis.
+   #Convert Dictionary to DataFrame
+   data=pd.DataFrame(data_dictionary.tolist())
+   #Add The Columns To the Original Data
+   data=pd.concat([raw_data,data],axis=1)
+   #Replace Missing Values
+   list_of_missing_values=['',None,np.nan]
+   data=data.replace(list_of_missing_values,'Not Specified')
+   #data[data['Descriptions']==None]
+   #Select Necessary Columns
+   data=data[['Names','Prices_$','Screen_Size','Processor','Ram','Storage','Graphics_Card','Operating_System','Ratings','Reviews']]
+   data
+   
 
----
-
-## 4. Feature Engineering
-*Details about feature extraction and engineering steps will be added here.*
-
----
+   *These extracted features were used for categorizing the laptops and applying further analysis.
 
 ## 5. Applying Discounts
 *Details about the discounting system will be added here.*
