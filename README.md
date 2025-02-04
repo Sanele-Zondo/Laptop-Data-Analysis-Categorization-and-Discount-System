@@ -1,7 +1,7 @@
 # Laptop Data Analysis and Categorization Project
 ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/136932d65b4741f69cfdb77aaa4eb52653ed4e39/cover.gif)
 ## Table of Contents
-1. [Introduction](##introduction)
+1. [Introduction](#introduction)
 2. [Data Collection](#data-collection)
 3. [Data Cleaning and Exploration](#data-cleaning-and-exploration)
 4. [Feature Engineering](#feature-engineering)
@@ -10,10 +10,11 @@
 7. [Data Visualization](#data-visualization)
 8. [Data Storage](#data-storage)
 9. [Descriptive Analytics](#descriptive-analytics)
-10. [Business Questions (Analytical & Performance Evaluation)](#Business-Questions-(Analytical-&-Performance-Evaluation))
-11. [Insights](#Insights)
-12. [Possible Recommendations](#Possible-Recommendations)
-11. [Challenges and Solutions](#Challenges-and-Solutions)
+10. [Business Questions (Analytical & Performance Evaluation)](#business-questions-analytical-performance-evaluation)
+11. [Insights](#insights)
+12. [Possible Recommendations](#possible-recommendations)
+13. [Challenges and Solutions](#challenges-and-solutions)
+
 ---
 
 ## 1. Introduction
