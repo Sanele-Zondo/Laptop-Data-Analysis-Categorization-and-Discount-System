@@ -105,13 +105,13 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
         print(f'{i}:{raw_data[i].nunique()}')
    
 4. **Correcting Errors**:
-5. 
-      -**Remove Whitespaces on column: Names**:
+   
+      i.**Remove Whitespaces on column: Names**:
          ```python
          raw_data['Names']=raw_data['Names'].str.strip()
          ```
    
-      -**Fix Names that contains '...'**:
+      ii.**Fix Names that contains '...'**:
          ```python
            #Data containing '...'
            data_with_dots=raw_data[raw_data['Names'].str.contains('...',regex=False)]
@@ -125,7 +125,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
            raw_data
          ```
    
-      -**Remove dollar sign($) to help us with changing data type**:
+      iii.**Remove dollar sign($) to help us with changing data type**:
       ```python
          raw_data['Prices']=raw_data['Prices'].str.replace('$','').str.strip()
          raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
