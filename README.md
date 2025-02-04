@@ -323,11 +323,11 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 ## 5. Export Data (Excel And SQL)
 # SQL
    db_parameters = {
-<!-- 'dbname': 'data_project',
-       'user': 'postgres',
-       'password': 'Sanele',
-       'host': 'localhost',
-       'port': '5432' -->
+<!-- 'dbname': 'data_project', -->
+      <!-- 'user': 'postgres', -->
+      <!-- 'password': 'Sanele', -->
+      <!-- 'host': 'localhost', -->
+      <!-- 'port': '5432' -->
    }
    try:
        connect = sql.connect(**db_parameters)
