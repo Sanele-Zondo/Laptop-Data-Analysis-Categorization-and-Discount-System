@@ -246,20 +246,20 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
           except Exception as e:
               print(f'Error:{e}')
               return 'Unknown'
-      data['ram_checker']=data['Ram'].str.extract(r'(.*)(?=GB)',expand=False).astype(float) 
-      data['price_checker']=data['Prices_$']
-      #Extract the Screen Size as float
-      data['screen_size_checker']=data['Screen_Size'].str.extract(r'(.*)(?=")',expand=False).astype(float)
-      #Check if it has graphic card
-      data['Graphics_Card_checker']=data['Graphics_Card'].apply(lambda x: Graphics_Card_Checker(x))
-      
-      #Categorize data
-      data['Category']=data.apply(lambda x: checker(x['price_checker'],x['screen_size_checker'],x['ram_checker'],x['Graphics_Card']),axis=1)
-      
-      data_cleaned=data[['Names','Prices_$','Screen_Size','Processor','Ram','Storage','Graphics_Card','Operating_System','Ratings','Reviews','Category']]
-      #Display Data
-      data_cleaned
-
+         data['ram_checker']=data['Ram'].str.extract(r'(.*)(?=GB)',expand=False).astype(float) 
+         data['price_checker']=data['Prices_$']
+         #Extract the Screen Size as float
+         data['screen_size_checker']=data['Screen_Size'].str.extract(r'(.*)(?=")',expand=False).astype(float)
+         #Check if it has graphic card
+         data['Graphics_Card_checker']=data['Graphics_Card'].apply(lambda x: Graphics_Card_Checker(x))
+         
+         #Categorize data
+         data['Category']=data.apply(lambda x: checker(x['price_checker'],x['screen_size_checker'],x['ram_checker'],x['Graphics_Card']),axis=1)
+         
+         data_cleaned=data[['Names','Prices_$','Screen_Size','Processor','Ram','Storage','Graphics_Card','Operating_System','Ratings','Reviews','Category']]
+         #Display Data
+         data_cleaned
+```
 ## 6. Applying Discounts
 *Details about the discounting system will be added here.*
 
