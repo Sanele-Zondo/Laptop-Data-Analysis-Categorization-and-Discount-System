@@ -62,7 +62,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 1. **Import Libraries**:
    
    ```python
-   import pandas as pd
+      import pandas as pd
       import numpy as np
       import re
       import psycopg2 as sql
@@ -72,32 +72,33 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
       from sklearn.tree import DecisionTreeClassifier
       from sklearn.tree import plot_tree
       from sklearn.metrics import accuracy_score
+   ```
 2. **Loading Data**:
    ```python
      read_csv = pd.read_csv('data.csv')
-    raw_data=pd.DataFrame(read_csv)
+    raw_data=pd.DataFrame(read_csv)```
 3. **Viewing Data**:
    ```python
-     raw_data.head(10)
+     raw_data.head(10)```
 
 4. **Data Quality Checks**:
    i. ***Number of rows and columns***
    ```python
-     print(f'(Rows,Columns)-->{raw_data.shape}')
+     print(f'(Rows,Columns)-->{raw_data.shape}')``
    ii. *** Data Checks ***
    ```python
-     raw_data.dtypes
+     raw_data.dtypes```
    iii. ***Identify Missing Values***
    ```python
-     raw_data.info()
+     raw_data.info()```
    iv. ***Understand the distinct values in each column***
    ```python
      for i in raw_data.columns:
-        print(f'{i}:{raw_data[i].nunique()}')
+        print(f'{i}:{raw_data[i].nunique()}')```
 4. ***Correcting Errors***:
    i. ***Remove Whitespaces on column: Names***
    ```python
-   raw_data['Names']=raw_data['Names'].str.strip()
+   raw_data['Names']=raw_data['Names'].str.strip()```
    ii. ***2. Fix Names that contains '...'***
    ```python
      #Data Containing '...'
@@ -114,7 +115,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
    ```python
    raw_data['Prices']=raw_data['Prices'].str.replace('$','').str.strip()
   raw_data.rename(columns={'Prices':'Prices_$'},inplace=True)
-  raw_data
+  raw_data```
 4. **Remove Rows with Missing or Irrelevant Data**: 
    - Any rows with missing values or duplicate laptop entries were removed to ensure clean and accurate data.
 3. **Standardize Columns**:
@@ -130,7 +131,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
       ,'Descriptions':str
   }
   raw_data=raw_data.astype(data_types)
-  print(raw_data.dtypes)
+  print(raw_data.dtypes)```
 4. *Handle outliers
  ```python
   Q1= raw_data['Prices_$'].quantile(0.25)
@@ -141,7 +142,7 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
   upper_bound=Q3+1.5*IQR
   upper_bound
   outliers=raw_data[(raw_data['Prices_$']<lower_bound)|(raw_data['Prices_$']>upper_bound)]
-  outliers
+  outliers```
 ### Regex Operations
 - **Regular Expressions** were used to extract relevant details from the "Descriptions" column. The extracted details include:
   - **Screen_Size**
