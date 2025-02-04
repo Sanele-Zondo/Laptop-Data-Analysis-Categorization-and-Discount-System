@@ -77,9 +77,11 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
    ```python
    read_csv = pd.read_csv('data.csv')
    raw_data=pd.DataFrame(read_csv)
+---
 -3. **Viewing Data**:
    ```python
    raw_data.head(10)
+---
 
 -4. **Data Quality Checks**:
 
@@ -87,14 +89,16 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
    
    ```python
      print(f'(Rows,Columns)-->{raw_data.shape}')
-   
+   ---
    2. ***Data Checks***
    ```python
      raw_data.dtypes
+   ---
    
    iii. ***Identify Missing Values***
    ```python
      raw_data.info()
+---
    
    iv. ***Understand the distinct values in each column***
    ```python
