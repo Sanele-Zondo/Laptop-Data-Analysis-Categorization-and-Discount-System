@@ -9,8 +9,11 @@
 6. [Model Building](#model-building)
 7. [Data Visualization](#data-visualization)
 8. [Data Storage](#data-storage)
-9. [Challenges and Solutions](#challenges-and-solutions)
-
+9. [Descriptive Analytics](#descriptive-analytics)
+10. [Business Questions (Analytical & Performance Evaluation)](#Business-Questions-(Analytical-&-Performance-Evaluation))
+11. [Insights](#Insights)
+12. [Possible Recommendations](#Possible-Recommendations)
+11. [Challenges and Solutions](#Challenges-and-Solutions)
 ---
 
 ## 1. Introduction
@@ -685,18 +688,17 @@ category_data
 category_data['Change_%']=((category_data['Discounted_Price_$']-category_data['Prices_$'])/category_data['Prices_$']*100).round(2)
 category_data.insert(0,'Category',category_data.index)
 ```
-## 11. Insights and Conclusions
+## 11. Insights
 
 - Based on the descriptive analysis, the **Gaming Laptop** category generally commands a higher price due to the demand for high-end specifications.
 - The majority of laptops have a rating of **4**, which is beneficial for the business, as products with higher ratings are more likely to attract buyers.
 - Discount strategies seem to result in almost the same percentage change across all categories.
 - **Work laptops** contribute significantly more to the potential revenue compared to other categories.
 
-## 12. Possible Recommendations:
+## 12. Possible Recommendations
 - Target high-value products for larger discounts to maximize sales impact.
 - Apply discounts across various pricing tiers to cater to customers with different budgets.
 - Create product bundles to encourage customers to purchase higher-value items.
-- Implement tiered discounts based on price range to appeal to a wider audience.
 - Adjust pricing strategies by conducting regular competitor analysis.
 - Offer volume discounts to incentivize bulk purchases.
 - Consider offering discounts for lower-rated laptops to enhance their appeal and drive sales.
