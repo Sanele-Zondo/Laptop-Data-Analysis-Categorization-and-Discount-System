@@ -72,29 +72,34 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
       from sklearn.tree import DecisionTreeClassifier
       from sklearn.tree import plot_tree
       from sklearn.metrics import accuracy_score
-   ```
+   
 2. **Loading Data**:
    ```python
-     read_csv = pd.read_csv('data.csv')
-    raw_data=pd.DataFrame(read_csv)```
+   read_csv = pd.read_csv('data.csv')
+   raw_data=pd.DataFrame(read_csv)```
 3. **Viewing Data**:
    ```python
-     raw_data.head(10)```
+   raw_data.head(10)```
 
 4. **Data Quality Checks**:
    i. ***Number of rows and columns***
+   
    ```python
-     print(f'(Rows,Columns)-->{raw_data.shape}')``
-   ii. *** Data Checks ***
+     print(f'(Rows,Columns)-->{raw_data.shape}')
+   
+   ii. ***Data Checks***
    ```python
-     raw_data.dtypes```
+     raw_data.dtypes
+   
    iii. ***Identify Missing Values***
    ```python
-     raw_data.info()```
+     raw_data.info()
+   
    iv. ***Understand the distinct values in each column***
    ```python
      for i in raw_data.columns:
-        print(f'{i}:{raw_data[i].nunique()}')```
+        print(f'{i}:{raw_data[i].nunique()}')
+   
 4. ***Correcting Errors***:
    i. ***Remove Whitespaces on column: Names***
    ```python
