@@ -73,17 +73,17 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
       from sklearn.tree import plot_tree
       from sklearn.metrics import accuracy_score
    
-2. **Loading Data**:
+-2. **Loading Data**:
    ```python
    read_csv = pd.read_csv('data.csv')
    raw_data=pd.DataFrame(read_csv)
-3. **Viewing Data**:
+-3. **Viewing Data**:
    ```python
    raw_data.head(10)
 
-4. **Data Quality Checks**:
+-4. **Data Quality Checks**:
 
-   1. ***Number of rows and columns***
+  - 1. ***Number of rows and columns***
    
    ```python
      print(f'(Rows,Columns)-->{raw_data.shape}')
