@@ -286,7 +286,7 @@ if __name__=='__main__':
            print(raw_data.dtypes)
       ```
 8. **Handle outliers**
-       ```python
+   ```python
         Q1= raw_data['Prices_$'].quantile(0.25)
         Q3= raw_data['Prices_$'].quantile(0.75)
         
