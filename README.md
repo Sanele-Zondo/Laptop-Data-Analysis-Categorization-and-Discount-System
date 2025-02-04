@@ -1,5 +1,5 @@
 # Laptop Data Analysis and Categorization Project
--![image alt](#cover.gif)
+-![image alt](#[cover.gif](https://github.com/Sanele-Zondo/data_projects/blob/136932d65b4741f69cfdb77aaa4eb52653ed4e39/cover.gif))
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Data Collection](#data-collection)
