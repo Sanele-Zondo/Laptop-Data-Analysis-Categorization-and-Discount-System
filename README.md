@@ -297,7 +297,7 @@ if __name__=='__main__':
         outliers=raw_data[(raw_data['Prices_$']<lower_bound)|(raw_data['Prices_$']>upper_bound)]
         outliers
       ```
-       ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/45fbf7b35d014de32659f6b9658ff4dc3da42cad/outliers.png)
+   ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/45fbf7b35d014de32659f6b9658ff4dc3da42cad/outliers.png)
 ---
 #### After Data Cleaning
    ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/c10eb561f093d6d28a7712e12bee6b4d22b4f02d/data_after_cleaning.png)
