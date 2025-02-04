@@ -212,19 +212,19 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
        else:
            return None
            
-   data_dictionary=raw_data['Descriptions'].apply(lambda x :search_text(x))
-   
-   #Convert Dictionary to DataFrame
-   data=pd.DataFrame(data_dictionary.tolist())
-   #Add The Columns To the Original Data
-   data=pd.concat([raw_data,data],axis=1)
-   #Replace Missing Values
-   list_of_missing_values=['',None,np.nan]
-   data=data.replace(list_of_missing_values,'Not Specified')
-   #data[data['Descriptions']==None]
-   #Select Necessary Columns
-   data=data[['Names','Prices_$','Screen_Size','Processor','Ram','Storage','Graphics_Card','Operating_System','Ratings','Reviews']]
-   data
+      data_dictionary=raw_data['Descriptions'].apply(lambda x :search_text(x))
+      
+      #Convert Dictionary to DataFrame
+      data=pd.DataFrame(data_dictionary.tolist())
+      #Add The Columns To the Original Data
+      data=pd.concat([raw_data,data],axis=1)
+      #Replace Missing Values
+      list_of_missing_values=['',None,np.nan]
+      data=data.replace(list_of_missing_values,'Not Specified')
+      #data[data['Descriptions']==None]
+      #Select Necessary Columns
+      data=data[['Names','Prices_$','Screen_Size','Processor','Ram','Storage','Graphics_Card','Operating_System','Ratings','Reviews']]
+      data
    
 
    *These extracted features were used for categorizing the laptops and applying further analysis.
