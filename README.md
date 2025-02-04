@@ -471,7 +471,9 @@ Revenue and Category Contribution:
    print('From Above anaysis:\nContributes Least to potential revenue-Education Category\nContributes High to potential revenue-Work Category')
 ```
 From Above anaysis:
+
 Contributes Least to potential revenue-Education Category
+
 Contributes High to potential revenue-Work Category
 ### Rating Analysis
 ```python
@@ -507,11 +509,13 @@ change_in_price=before_price_changes-after_price_changes
 print(f'Change In Price:$ {change_in_price.round(2)}')
 ```
 Potential Revenue Before Price Changes : $ 106399.08
+
 Potential Revenue After Price Changes : $ 95128.7
+
 Change In Price:$ 11270.38
 ### Price Change Implications:
 ```python
-#1. What are the implications of the price changes on overall revenue (e.g., profit margins)?
+#1. What are the implications of the price changes on overall revenue?
 print(f'Potential Revenue Decreased By:$ {change_in_price.round(2)}')
 ```
 Potential Revenue Decreased By:$ 11270.38
