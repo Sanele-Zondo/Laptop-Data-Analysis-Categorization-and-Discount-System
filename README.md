@@ -319,7 +319,74 @@ Data is scraped from an e-commerce website: [Webscraper Test Site](https://websc
 
 ## 8. Data Storage
 *Details about how data is stored in SQL and structured queries will be added here.*
-
+```python
+## 5. Export Data (Excel And SQL)
+# SQL
+   db_parameters = {
+<!--
+       'dbname': 'data_project',
+       'user': 'postgres',
+       'password': 'Sanele',
+       'host': 'localhost',
+       'port': '5432'
+-->
+   }
+   try:
+       connect = sql.connect(**db_parameters)
+       cursor  = connect.cursor()
+       
+       create_table =''' Create Table If Not Exists laptops_data(
+           Id int Primary Key
+           ,Name varchar
+           ,Prices_$ float
+           ,Discounted_Price_$ float
+           ,Screen_Size varchar
+           ,Processor varchar
+           ,Ram varchar
+           ,Storage varchar
+           ,Graphics_Card varchar
+           ,Operating_System varchar
+           ,Ratings int
+           ,Reviews int
+           ,Category varchar
+           
+       )
+       '''
+       #Create Table in PostGres
+       cursor.execute(create_table)
+       #commit Changes
+       connect.commit()
+       #Clear the existing table before inserting
+       cursor.execute('Truncate Table laptops_data')
+       #Insert data
+       insert_query="""INSERT INTO laptops_data VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
+       
+       for index, row in data_cleaned.iterrows():
+           cursor.execute(insert_query,[index
+                                        ,row['Names']
+                                        ,row['Prices_$']
+                                        ,row['Discounted_Price_$']
+                                        ,row['Screen_Size']
+                                        ,row['Processor']
+                                        ,row['Ram']
+                                        ,row['Storage']
+                                        ,row['Graphics_Card']
+                                        ,row['Operating_System']
+                                        ,row['Ratings']
+                                        ,row['Reviews']
+                                        ,row['Category']
+                                       ])
+       #commit Changes
+       connect.commit()
+       
+   except Exception as e:
+       print(f'Error:{e}')
+   finally:
+       if connect:
+           connect.close()
+       if  cursor:
+           cursor.close()
+```
 ---
 
 ## 9. Challenges and Solutions
