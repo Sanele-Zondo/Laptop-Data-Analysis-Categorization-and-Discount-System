@@ -23,7 +23,7 @@
 This project involves scraping laptop data from a website, cleaning and transforming it, categorizing laptops into work, gaming, and education categories, applying discounts based on certain criteria, and building a model to automate the categorization. The project concludes by visualizing the data and saving it into an SQL database for further analysis.
 
 ### Objective
-The main objective is to automate the process of extracting, cleaning, categorizing, and analyzing laptop data, applying discounts where applicable, and visualizing insights. The data will then be stored in a structured format in an SQL database.
+The main objective is to extract, clean, categorize, and analyze laptop data, apply discounts where applicable, and visualize insights. The data will then be stored in a structured format in an SQL database.
 
 ### Step-by-Step Guide
 - Scrape the laptop data from the website
@@ -402,10 +402,8 @@ if __name__=='__main__':
 ```
 ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/feature.png)
 ## 6. Applying Discounts
-### Discount Logic: 
-*Discount system is a structured approach for offering reductions in price on products or services. This system can be implemented in various ways depending on the business model, objectives, and customer behavior*
 
-#### Implement a discount strategy based on certain criteria.
+#### Implement a discount strategy based on criteria.
 
 Use conditional logic to apply discounts to the Price column: 
 
@@ -439,7 +437,9 @@ Use conditional logic to apply discounts to the Price column:
 ---
 
 ## 7. Model Building
-*Prepare Your Dataset: The dataset is cleaned and ready. The dataset should have the features: ram_checker, price_checker, screen_size_checker, and Graphics_Card_checker, as well as the target variable Category.*
+*The dataset is cleaned and ready for decision tree model.*
+*The model features: ram_checker, price_checker, screen_size_checker, and Graphics_Card_checker.*
+*Target variable: Category.*
 ```python
    #Prepare Data[Feature(X) and Target(y)]
    X=data_cleaned_model[['ram_checker','price_checker','screen_size_checker','Graphics_Card_checker']]
@@ -469,7 +469,6 @@ Use conditional logic to apply discounts to the Price column:
 ---
 
 ## 8. Data Visualization
-*Details about data visualization and insights will be added here.*
 ```python
    group=data_cleaned.groupby('Ratings').agg({'Names':'count'})
    
@@ -729,6 +728,5 @@ category_data.insert(0,'Category',category_data.index)
 
 ### Solutions Implemented:
 - **Data Cleaning**: Advanced regex techniques were applied to extract and standardize data, ensuring consistency and filling missing values where possible.
-- **Model Tuning**: The model was improved by changing settings and making the input data (features) better, which helped the model make more accurate predictions.
 
 
