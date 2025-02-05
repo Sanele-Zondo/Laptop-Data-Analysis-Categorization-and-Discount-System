@@ -408,8 +408,10 @@ if __name__=='__main__':
 #### Implement a discount strategy based on certain criteria.
 
 Use conditional logic to apply discounts to the Price column: 
--*Clearance sale of 15%*
--*Sale of 10% excluding products in clearance sale*
+
+1. *Clearance sale of 15%*
+
+2. *Sale of 10% excluding products in clearance sale*
 
 #### New Column Created: 
 *Discounted Price – Calculated by applying the discount to the original price.*
