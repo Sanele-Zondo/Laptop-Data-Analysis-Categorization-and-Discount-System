@@ -402,6 +402,16 @@ if __name__=='__main__':
 ```
 ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/feature.png)
 ## 6. Applying Discounts
+### Discount Logic: 
+*Discount system is a structured approach for offering reductions in price on products or services. This system can be implemented in various ways depending on the business model, objectives, and customer behavior*
+
+#### Implement a discount strategy based on certain criteria.
+-- Use conditional logic to apply discounts to the Price column: 
+*Clearance sale of 15%*
+*Sale of 10% excluding products in clearance sale*
+#### New Column Created: 
+*Discounted Price – Calculated by applying the discount to the original price.*
+
 *Clearance sale of 15%
 ```python
    laptops_clearance_sale=data_cleaned.query("Operating_System in ['Windows 8.1', 'Win7 Pro 64bit', 'Window 8.1 Pro']")
