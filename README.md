@@ -406,9 +406,11 @@ if __name__=='__main__':
 *Discount system is a structured approach for offering reductions in price on products or services. This system can be implemented in various ways depending on the business model, objectives, and customer behavior*
 
 #### Implement a discount strategy based on certain criteria.
--- Use conditional logic to apply discounts to the Price column: 
-*Clearance sale of 15%*
-*Sale of 10% excluding products in clearance sale*
+
+Use conditional logic to apply discounts to the Price column: 
+-*Clearance sale of 15%*
+-*Sale of 10% excluding products in clearance sale*
+
 #### New Column Created: 
 *Discounted Price – Calculated by applying the discount to the original price.*
 
