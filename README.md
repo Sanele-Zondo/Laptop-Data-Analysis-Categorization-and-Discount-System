@@ -425,7 +425,7 @@ if __name__=='__main__':
 ---
 
 ## 7. Model Building
-*Details about the categorization model and machine learning techniques used will be added here.*
+*Prepare Your Dataset: The dataset (data_cleaned_model) is cleaned and ready. The dataset should have the features: ram_checker, price_checker, screen_size_checker, and Graphics_Card_checker, as well as the target variable Category.*
 ```python
    #Prepare Data[Feature(X) and Target(y)]
    X=data_cleaned_model[['ram_checker','price_checker','screen_size_checker','Graphics_Card_checker']]
