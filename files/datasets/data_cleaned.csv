@@ -1,0 +1,118 @@
+,Names,Prices_$,Discounted_Price_$,Screen_Size,Processor,Ram,Storage,Graphics_Card,Operating_System,Ratings,Reviews,Category
+0,Packard 255 G2,416.99,354.44,"15.6""",AMD E2-3800 1.3GHz,4GB,500GB,Not Specified,Windows 8.1,2,2,Work
+1,Thinkpad T540P,1178.99,1002.14,"15.6""",Core i5-4200M,4GB,500GB,Not Specified,Win7 Pro 64bit,1,2,Work
+2,Probook,739.99,628.99,"14""",Core i5 2.6GHz,4GB,500GB,Not Specified,Win7 Pro 64bit,4,8,Work
+3,Thinkpad X240,1311.99,1115.19,"12.5""",Core i5-4300U,8GB,240GB SSD,Not Specified,Win7 Pro 64bit,3,12,Work
+4,Aspire E1-572G,581.99,494.69,"15.6""",Core i5-4200U,8GB,1TB,Radeon R7 M265,Windows 8.1,1,2,Gaming
+5,Thinkpad Yoga,1033.99,878.89,"12.5"" Touch",Core i3-4010U,4GB,500GB + 16GB SSD Cache,Not Specified,Window 8.1 Pro,2,13,Work
+6,Pavilion,609.99,518.49,"15.6""",Core i5-4200U,6GB,750GB,Not Specified,Windows 8.1,1,4,Work
+7,Inspiron 15,745.99,634.09,"15.6""",Core i7-4510U,8GB,1TB,Radeon HD R7 M265 2GB,Window 8.1 Pro,3,12,Gaming
+8,Dell Xps 13,1281.99,1089.69,"13.3"" Touch",Core i5-4210U,8GB,128GB SSD,Not Specified,Windows 8.1,3,4,Work
+9,Thinkpad X230,1244.99,1058.24,"12.5""",Core i5 2.6GHz,8GB,180GB SSD,Not Specified,Win7 Pro 64bit,3,10,Work
+10,Hp 250 G3,520.99,442.84,"15.6""",Core i5-4210U,4GB,500GB,Not Specified,Windows 8.1,2,13,Work
+11,Thinkpad Yoga,1223.99,1040.39,"2.5"" Touch",Core i5 4200U,8GB,500GB + 16GB SSD Cache,Not Specified,Windows 8.1,3,2,Work
+12,Hp 350 G1,577.99,491.29,"15.6""",Core i5-4200U,4GB,750GB,Radeon HD8670M 2GB,Windows 8.1,2,10,Work
+13,Asus Asuspro Advanced Bu401La-Fa271G Dark Grey,1139.54,968.61,"14""",Core i5-4210U,4GB,128GB SSD,Not Specified,Win7 Pro 64bit,3,7,Work
+14,Aspire E1-510,306.99,276.29,"15.6""",Pentium N3520 2.16GHz,4GB,500GB,Not Specified,Linux,3,2,Work
+15,Asus Vivobook Max X541Na-Gq041 Black Chocolate,399.0,359.1,"15.6"" HD",Pentium N4200 1.1GHz,4GB,500GB,Not Specified,Windows 10 Home,1,4,Work
+16,Dell Vostro 15,488.78,439.9,"15.6"" FHD",Core i5-7200U,4GB,128GB SSD,Radeon R5 M420 2GB,Linux,4,14,Work
+17,Acer Spin 5,564.98,508.48,"13.3"" FHD Touch",Core i3-7100U,4GB,128GB SSD,Not Specified,Windows 10 Home,2,0,Work
+18,Acer Aspire A515-51-5654,679.0,611.1,"15.6"" FHD",Core i5-8250U,8GB DDR4,256GB SSD,Not Specified,Windows 10 Home,2,9,Work
+19,Dell Inspiron 15 (5567) Fog Gray,679.0,611.1,"15.6"" FHD",Core i5-7200U,8GB,1TB,Radeon R7 M445 4GB,Linux,2,7,Gaming
+20,Asus Vivobook S14 (S406Ua-Bv041T) Starry Grey,729.0,656.1,"14""",Core i5-8250U,8GB,256GB SSD,Not Specified,Windows 10 Home,1,2,Work
+21,Asus Rog Strix Gl553Vd-Dm256,799.0,719.1,"15.6"" FHD",Core i5-7300HQ,8GB,1TB,GeForce GTX 1050 2GB,Not Specified,2,7,Gaming
+22,Acer Nitro 5 An515-51,809.0,728.1,"15.6"" FHD IPS",Core i5-7300HQ,8GB,1TB,GeForce GTX 1050 2GB,Windows 10 Home,1,0,Gaming
+23,Asus Rog Strix Gl553Vd-Dm256,899.0,809.1,"15.6"" FHD",Core i5-7300HQ,8GB,1TB,GeForce GTX 1050 2GB,Not Specified,1,7,Gaming
+24,Lenovo Thinkpad L570,999.0,899.1,"15.6"" FHD",Core i7-7500U,8GB,256GB SSD,Not Specified,Windows 10 Pro,3,11,Work
+25,Lenovo Legion Y520-15Ikbm,1149.0,1034.1,"15.6"" FHD IPS",Core i7-7700HQ,8GB,128GB SSD + 1TB,GeForce GTX 1060 Max-Q 6GB,DOS,3,11,Gaming
+26,Lenovo Legion Y720,1399.0,1259.1,"15.6"" FHD IPS",Core i7-7700HQ,8GB,128GB SSD + 2TB HDD,GeForce GTX 1060 6GB,DOS,3,8,Gaming
+27,Asus Rog Strix Gl702Zc-Gc154T,1769.0,1592.1,"17.3"" FHD",Ryzen 7 1700,16GB,256GB + 1TB HDD,Radeon RX 580 4GB,Windows 10 Home,4,7,Gaming
+28,Asus Rog Strix Gl702Zc-Gc209T,1769.0,1592.1,"17.3"" FHD IPS",Ryzen 7 1700,16GB,256GB SSD + 1TB HDD,Radeon RX 580 4GB,Windows 10 Home,1,8,Gaming
+29,Asus Rog Strix Scar Edition Gl503Vm-Ed115T,1799.0,1619.1,"15.6"" FHD 120Hz",Core i7-7700HQ,16GB,256GB SSD + 1TB SSHD,GeForce GTX 1060 6GB,Windows 10 Home,3,8,Gaming
+30,Asus Vivobook X441Na-Ga190 Chocolate Black,295.99,266.39,"14""",Celeron N3450,4GB,128GB SSD,Not Specified,Not Specified,3,14,Education
+31,Prestigio Smartbook 133S Dark Grey,299.0,269.1,"13.3"" FHD IPS",Celeron N3350 1.1GHz,4GB,32GB,Not Specified,Windows 10 Pro + Office 365 1 gadam,2,8,Education
+32,Prestigio Smartbook 133S Gold,299.0,269.1,"13.3"" FHD IPS",Celeron N3350 1.1GHz,4GB,32GB,Not Specified,Windows 10 Pro + Office 365 1 gadam,4,12,Education
+33,Lenovo V110-15Iap,321.94,289.75,"15.6"" HD",Celeron N3350 1.1GHz,4GB,128GB SSD,Not Specified,Windows 10 Home,3,5,Work
+34,Asus Vivobook 15 X540Na-Gq008T Chocolate Black,356.49,320.84,"15.6"" HD",Pentium N4200,4GB,500GB,Not Specified,Windows 10 Home,2,6,Work
+35,Hewlett Packard 250 G6 Dark Ash Silver,364.46,328.01,"15.6"" HD",Celeron N3060 1.6GHz,4GB,128GB SSD,Not Specified,DOS,1,12,Work
+36,Acer Aspire 3 A315-31 Black,372.7,335.43,"15.6"" HD",Celeron N3350 1.1GHz,4GB,128GB SSD,Not Specified,Windows 10 Home,2,2,Work
+37,"Acer Aspire A315-31-C33J Black 15.6"" Hd",379.94,341.95,"15.6"" HD",Celeron N3350,4GB DDR3L,128GB,Not Specified,Windows 10 Home,2,0,Work
+38,Acer Aspire Es1-572 Black,379.95,341.96,"15.6"" HD",Core i3-6006U,4GB,128GB SSD,Not Specified,Linux,4,9,Work
+39,Acer Aspire 3 A315-31 Black,391.48,352.33,"15.6"" HD",Pentium N4200 1.1GHz,4GB,128GB SSD,Not Specified,Windows 10 Home,4,10,Work
+40,Acer Aspire 3 A315-21,393.88,354.49,"15.6""",AMD A4-9120,4GB,128GB SSD,Not Specified,Linux,3,9,Work
+41,Asus Vivobook E502Na-Go022T Dark Blue,399.99,359.99,"15.6"" HD",Pentium N4200 1.1GHz,4GB,128GB SSD,Not Specified,Windows 10 Home,4,3,Work
+42,Lenovo Thinkpad E31-80,404.23,363.81,"13.3"" HD",Celeron 3855U 1.6GHz,4GB,128GB SSD,Not Specified,Windows 10 Home,1,12,Education
+43,Acer Aspire 3 A315-31 Black,408.98,368.08,"15.6"" HD",Pentium N4200 1.1GHz,4GB,128GB SSD,Not Specified,Windows 10 Home,4,10,Work
+44,Lenovo V110-15Isk,409.63,368.67,"15.6"" HD",Core i3-6006U,8GB,128GB SSD,Not Specified,Windows 10 Home,3,9,Work
+45,Acer Aspire Es1-732 Black,410.46,369.41,"17.3"" HD+",Celeron  N3350,4GB,1TB,Not Specified,Windows 10 Home,4,14,Work
+46,Asus Vivobook 15 X540Na-Gq026T Chocolate Black,410.66,369.59,"15.6"" HD",Pentium N4200,4GB,128GB SSD,Not Specified,Windows 10 Home,4,4,Work
+47,Asus Eeebook R416Na-Fa014T,433.3,389.97,"14"" FHD",Pentium N4200,4GB,128GB eMMC,Not Specified,Windows 10 Home,1,1,Education
+48,Acer Aspire 3 A315-51,436.29,392.66,"15.6"" HD",Core i3-6006U,4GB,1TB,Not Specified,Windows 10 Home,1,1,Work
+49,Acer Aspire Es1-572 Black,436.29,392.66,"15.6"" HD",Core i3-6006U,4GB,500GB,Not Specified,Windows 10 Home,1,2,Work
+50,Acer Extensa 15 (2540) Black,439.73,395.76,"15.6"" HD",Core i5-7200U,4GB,500GB,Not Specified,Linux,4,6,Work
+51,Acer Aspire Es1-572 Black,454.62,409.16,"15.6"" HD",Core i5-7200U,4GB,500GB,Not Specified,Linux,1,9,Work
+52,Lenovo V110-15Isk,454.73,409.26,"15.6"" HD",Core i3-6006U,4GB,128GB SSD,Not Specified,Windows 10 Pro,2,2,Work
+53,Acer Aspire A315-51-33Tg,457.38,411.64,"15.6"" HD",Core i3-7100U,4GB DDR4,128GB SSD,Not Specified,Windows 10 Home,3,9,Work
+54,Lenovo V110-15Ikb,465.95,419.36,"15.6"" HD",Core i5-7200U,4GB,500GB,Not Specified,DOS,1,7,Work
+55,Asus Vivobook 15 X540Ua-Dm260 Chocolate Black,468.56,421.7,"15.6"" FHD",Core i3-6006U,4GB,256GB SSD,Not Specified,Not Specified,3,1,Work
+56,Acer Aspire Es1-572 Black,469.1,422.19,"15.6"" HD",Core i3-6006U,4GB,128GB SSD,Not Specified,Windows 10 Home,3,5,Work
+57,Lenovo V510 Black,484.23,435.81,"14"" HD",Core i3-6006U,4GB,128GB SSD,Not Specified,Windows 10 Home,3,8,Education
+58,Acer Aspire Es1-572 Black,485.9,437.31,"15.6"" HD",Core i5-7200U,4GB,128GB SSD,Not Specified,Linux,3,6,Work
+59,Lenovo V510 Black,487.8,439.02,"15.6"" HD",Core i3-6006U,4GB,128GB SSD,Not Specified,Windows 10 Home,2,9,Work
+60,Acer Swift 1 Sf113-31 Silver,488.64,439.78,"13.3"" FHD",Pentium N4200,4GB,128GB SSD,Not Specified,Windows 10 Home,3,4,Education
+61,Acer Aspire 3 A315-51 Black,494.71,445.24,"15.6"" FHD",Core i3-7100U,4GB,500GB + 128GB SSD,Not Specified,Windows 10 Home,4,2,Work
+62,Dell Vostro 15 (3568) Red,497.17,447.45,"15.6"" HD",Core i5-7200U,4GB,1TB,Radeon R5 M420 2GB,Linux,1,9,Work
+63,Lenovo V510 Black,498.23,448.41,"15.6"" FHD",Core i3-7100U,4GB,128GB SSD,Not Specified,Windows 10 Pro,3,5,Work
+64,Lenovo Thinkpad L460,1096.02,986.42,"14"" FHD IPS",Core i7-6600U,8GB,256GB SSD,Not Specified,Windows 10 Pro,4,14,Work
+65,Dell Inspiron 15 (7567) Black,1098.42,988.58,"15.6"" FHD",Core i5-7300HQ,8GB,256GB SSD,GeForce GTX 1050 4GB,Windows 10 Home,1,7,Gaming
+66,Msi Gl72M 7Rdx,1099.0,989.1,"17.3"" FHD",Core i5-7300HQ,8GB,1TB + 128GB SSD,GeForce GTX 1050 2GB,Windows 10 Home,4,1,Gaming
+67,Msi Gl72M 7Rdx,1099.0,989.1,"15.6"" FHD",Core i7-7700HQ,8GB,1TB + 128GB SSD,GeForce GTX 1050 2GB,Windows 10 Home,1,9,Gaming
+68,Apple Macbook Air,1101.83,991.65,"13.3""",Core i5 1.8GHz,8GB,128GB SSD,Intel HD 4000,Not Specified,2,4,Work
+69,Dell Latitude 5280,1102.66,992.39,"12.5"" HD",Core i5-7300U,8GB,256GB SSD,Not Specified,Windows 10 Pro,1,8,Work
+70,Dell Latitude 5480,1110.14,999.13,"14"" FHD",Core i5-7300U,8GB,500GB,Not Specified,Linux,3,4,Work
+71,Lenovo Legion Y520-15Ikbm,1112.91,1001.62,"15.6"" FHD IPS",Core i5-7300HQ,8GB,128GB SSD + 2 TB HDD,NVIDIA GeForce GTX 1060 6 GB,FreeDOS,4,1,Gaming
+72,Toshiba Portege Z30-C-16J Grey,1114.55,1003.09,"13.3"" FHD",Core i5-6200U,8GB,256GB SSD,Not Specified,Windows 10 Pro,1,0,Work
+73,Acer Predator Helios 300 (Ph317-51),1123.87,1011.48,"17.3"" FHD IPS",Core i5-7300HQ,8GB,1TB + 128GB SSD,GeForce GTX 1050Ti 4GB,Windows 10 Home,2,1,Gaming
+74,Acer Aspire 7 A715-71G,1123.87,1011.48,"15.6"" FHD IPS",Core i7-7700HQ,8GB,128GB SSD + 1TB HDD,GTX 1050 Ti 4GB,Windows 10 Home,2,4,Gaming
+75,Dell Inspiron 17 2In1 (7779) Silver,1124.2,1011.78,"17.3"" FHD Touch",Core i5-7200U,12GB,1TB,GeForce GT940MX 2GB,Windows 10 Home,3,10,Gaming
+76,Dell Latitude 5480,1133.82,1020.44,"14"" FHD",Core i5-7300U,8GB,500GB,Not Specified,Windows 10 Pro,4,14,Work
+77,Lenovo Legion Y520,1133.91,1020.52,"15.6"" FHD",Core i7-7700HQ,8GB,128GB SSD + 1TB HDD,GTX 1050 4GB,Windows 10 Home,1,13,Gaming
+78,Acer Nitro 5 An515-51,1140.62,1026.56,"15.6"" FHD IPS",Core i7-7700HQ,8GB,256GB SSD +1TB,GeForce GTX 1050 Ti 4GB,Windows 10 Home + Windows 10 Home,3,14,Gaming
+79,Dell Latitude 5480,1143.4,1029.06,"14"" FHD",Core i5-7440HQ,8GB,256GB SSD,Not Specified,Windows 10 Pro,4,5,Work
+80,Dell Inspiron 15 (7567) Black,1144.2,1029.78,"15.6"" FHD",Core i7-7700HQ,8GB,1TB,GeForce GTX 1050 Ti 4GB,Linux,1,2,Gaming
+81,Dell Latitude 5580,1144.4,1029.96,"15.6"" FHD",Core i5-7300U,8GB,256GB SSD,Not Specified,Windows 10 Pro,3,10,Work
+82,Msi Gp62M 7Rdx Leopard,1149.0,1034.1,"15.6"" FHD",Core i7-7700HQ,8GB,1TB + 128GB SSD,GeForce GTX 1050 2GB,Windows 10 Home,1,11,Gaming
+83,Lenovo Yoga 720 Grey,1149.73,1034.76,"15.6"" FHD IPS",Core i5-7300HQ,8GB,256GB SSD,GeForce GTX 1050 2GB,Windows 10 Home,2,12,Gaming
+84,Toshiba Portege Z30-C-16L Grey,1154.04,1038.64,"13.3"" FHD",Core i7-6500U,8GB,256GB SSD,Not Specified,Windows 10 Pro,1,7,Work
+85,Acer Travelmate P645-S-511A Black,1170.1,1053.09,"14"" FHD IPS",Core i5-5200U,8GB,256GB SSD,3GB,Windows 10 Pro,1,0,Work
+86,Dell Latitude 5580,1178.19,1060.37,"15.6"" FHD",Core i5-7300U,16GB,256GB SSD,Not Specified,Linux,3,6,Work
+87,Msi Gs63 7Rd Stealth,1179.0,1061.1,"15.6"" FHD IPS",Core i7-7700HQ,8GB,256GB SSD,GeForce GTX 1050 2GB,DOS,1,2,Gaming
+88,Dell Latitude 5480,1187.88,1069.09,"14"" FHD",Core i5-7300U,8GB,256GB SSD,Not Specified,Windows 10 Pro,3,5,Work
+89,Acer Predator Helios 300 (Ph317-51),1187.98,1069.18,"17.3"" FHD IPS",Core i7-7700HQ. ,8GB,128GB SSD +1TB,GeForce GTX 1050Ti 4GB,Linux,3,14,Gaming
+90,Msi Gl62M 7Rex,1199.0,1079.1,"15.6"" FHD",Core i7-7700HQ,8GB,1TB + 128GB SSD,GeForce GTX 1050 Ti 2GB,Windows 10 Home,1,7,Gaming
+91,Msi Gl62M 7Rex2,1199.0,1079.1,"15.6"" FHD",Core i7-7700HQ,8GB,1TB + 128GB SSD,GeForce GTX 1050 Ti 2GB,Windows 10 Home,2,12,Gaming
+92,Lenovo Yoga 910 Grey,1199.73,1079.76,"13.9"" FHD Touch",Core i5-7200U,8GB,256GB SSD,Not Specified,Windows 10 Home,3,7,Work
+93,Toshiba Portege X30-D-10J Black/Blue,1203.41,1083.07,"13.3"" FHD IPS",Core i5-7200U,8GB,256GB SSD,Not Specified,Windows 10 Pro,4,13,Work
+94,Lenovo Ideapad Miix 510 Platinum Silver,1212.16,1090.94,"12.2"" IPS Touch",Core i5-7200U,8GB,256GB SSD,4GB,Windows 10 Pro,4,0,Work
+95,Acer Predator Helios 300 (Ph317-51),1221.58,1099.42,"17.3"" FHD IPS",Core i7-7700HQ,8GB,1TB + 128GB SSD,GeForce GTX 1050 Ti 4GB,Windows 10 Home,1,9,Gaming
+96,Asus Vivobook Pro 15 N580Vn-Fi006T Gold Metal,1235.49,1111.94,"15.6"" UHD",Core i7-7700HQ,16GB,1TB + 256GB SSD,GeForce MX150 2GB,Windows 10 Home,2,10,Gaming
+97,Dell Latitude 5480,1238.37,1114.53,"14"" FHD",Core i7-7600U,8GB,256GB SSD,Not Specified,Linux,2,0,Work
+98,Asus Zenbook Ux530Ux-Fy040T Blue,1239.2,1115.28,"15.6"" FHD",Core i7-7500U,8GB,512GB SSD,GeForce GTX950M 2GB,Windows 10 Home,1,14,Gaming
+99,Asus Rog Strix Gl753Ve-Gc096T,1259.0,1133.1,"17.3"" FHD",Core i7-7700HQ,8GB,1TB + 128GB SSD,GeForce GTX 1050 Ti 4GB,Windows 10 Home,4,7,Gaming
+100,Apple Macbook Air,1260.13,1134.12,"13""",i5 1.8GHz,8GB,256GB SSD,Intel HD 6000,Not Specified,4,8,Work
+101,Dell Latitude 5480,1271.06,1143.95,"14"" FHD",Core i7-7600U,8GB,1TB,GeForce GT930MX,Windows 10 Pro,1,13,Work
+102,Hewlett Packard Spectre 13-V106Na Dark Ash Silver,1273.11,1145.8,"13.3"" FHD IPS",Core i5-7200U,8GB,256GB SSD,Not Specified,Windows 10 Home,3,8,Work
+103,Toshiba Portege Z30-C-16K Grey,1294.74,1165.27,"13.3"" FHD",Core i5-6200U,8GB,256GB SSD,4GB,Windows 10 Pro,1,6,Work
+104,Msi Gl62Vr 7Rfx,1299.0,1169.1,"15.6"" FHD",Core i7-7700HQ,8GB,1TB + 256GB SSD,GeForce GTX 1060 3GB,Windows 10 Home,3,1,Gaming
+105,Dell Latitude 5480,1310.39,1179.35,"14"" FHD",Core i7-7600U,8GB,256GB SSD,Not Specified,Windows 10 Pro,3,8,Work
+106,Hewlett Packard Probook 640 G3,1326.83,1194.15,"14"" FHD",Core i7-7600U,8GB,256GB SSD,Not Specified,Windows 10 Pro,1,2,Work
+107,Apple Macbook Pro,1333.0,1199.7,"13""",Core i5 2.3GHz,8GB,128GB SSD,Not Specified,Iris,1,0,Work
+108,Dell Latitude 5580,1337.28,1203.55,"15.6"" FHD",Core i7-7600U,8GB,256GB SSD,GeForce GT930MX,Windows 10 Pro,1,6,Gaming
+109,Dell Latitude 5480,1338.37,1204.53,"14"" FHD",Core i7-7600U,8GB,256GB SSD,Not Specified,Linux,2,11,Work
+110,Dell Latitude 5580,1341.22,1207.1,"15.6"" FHD",Core i7-7600U,16GB,256GB SSD,GeForce GT930MX,Linux,3,3,Gaming
+111,Apple Macbook Air,1347.78,1213.0,"13""",Intel Core i5 1.8GHz,8GB,256GB SSD,Intel HD 6000,Not Specified,2,11,Work
+112,Lenovo Thinkpad T470,1349.23,1214.31,"14"" FHD IPS",Core i5-7200U,8GB,256GB SSD,Not Specified,Windows 10 Pro,1,5,Work
+113,Lenovo Thinkpad Yoga 370 Black,1362.24,1226.02,"13.3"" FHD IPS Touch",Core i5-7200U,8GB,256GB SSD,4GB,Windows 10 Pro,2,12,Work
+114,Toshiba Portege X20W-D-10V Black/Blue,1366.32,1229.69,"12.5"" FHD Touch",Core i7-7500U,8GB,512GB SSD,Not Specified,Windows 10 Pro,1,11,Work
+115,Asus Asuspro B9440Ua-Gv0279R Gray,1381.13,1243.02,"14"" FHD",Core i7-7500U,16GB,512GB SSD,Not Specified,Windows 10 Pro,1,4,Work
+116,Asus Rog Strix Gl702Vm-Gc146T,1399.0,1259.1,"17.3"" FHD",Core i7-7700HQ,8GB,1TB + 128GB SSD,GeForce GTX 1060 3GB,Windows 10 Home,3,10,Gaming
