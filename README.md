@@ -1,5 +1,5 @@
 # Laptop Data Analysis and Categorization Project
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/136932d65b4741f69cfdb77aaa4eb52653ed4e39/cover.gif)
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/cover.gif)
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Data Collection](#data-collection)
@@ -300,10 +300,10 @@ if __name__=='__main__':
         outliers=raw_data[(raw_data['Prices_$']<lower_bound)|(raw_data['Prices_$']>upper_bound)]
         outliers
       ```
-   ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/45fbf7b35d014de32659f6b9658ff4dc3da42cad/outliers.png)
+   ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/outliers.png)
 ---
 #### After Data Cleaning
-   ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/c10eb561f093d6d28a7712e12bee6b4d22b4f02d/data_after_cleaning.png)
+   ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/data_after_cleaning.png)
 ## 4. Feature Engineering
 ### Regex Operations
    - **Regular Expressions** were used to extract relevant details from the "Descriptions" column. The extracted details include:
@@ -400,7 +400,7 @@ if __name__=='__main__':
          #Display Data
          data_cleaned
 ```
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/6bcfbf2fcda8fb9854fc9d39daf3406a48930b05/feature.png)
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/feature.png)
 ## 6. Applying Discounts
 *Clearance sale of 15%
 ```python
@@ -421,7 +421,7 @@ if __name__=='__main__':
    data_cleaned=pd.concat([laptops_clearance_sale,laptops_sale],ignore_index=True)
    data_cleaned
 ```
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/ddbe816f0ac519a5d95e88fa0821224512be337c/afterDiscount.png)
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/afterDiscount.png)
 ---
 
 ## 7. Model Building
@@ -451,7 +451,7 @@ if __name__=='__main__':
    plot_tree(tree,filled=True,feature_names=['ram_checker','price_checker','screen_size_checker','Graphics_Card_checker'],class_names=['Education','Work','Gaming'])
    plt.show()
 ```
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/7cfb4e7288a70c1234c09ec25e19355c063f5ab2/model.png)
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/model.png)
 ---
 
 ## 8. Data Visualization
@@ -499,7 +499,7 @@ if __name__=='__main__':
 
 
 ```
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/304db48d3b2d7a6a7b02499fdddd482337910813/dashboard.png)
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/dashboard.png)
 
 ---
 
@@ -594,20 +594,20 @@ Potential Revenue: $106399.08
        return df.groupby(col).agg({values:'count'}).sort_values(by=values,ascending=True)
    groupby_count(data_cleaned,'Operating_System','Names')
    ```
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/0e5943a33152374c3c276ae5f05aa724c22e8e4d/byOS.png)
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/byOS.png)
 
 ```python
    # 4.Distribution by Category
    groupby_count(data_cleaned,'Category','Names')
 ```
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/e81dc8e8d4cbd864fbd6ce4b568c6e0d2d136e6c/distritutionByCategory.png)
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/distritutionByCategory.png)
 ```python
     # 5. What is the average price for laptop in each category?
     def ave_by_col(df,col,values):
         return df.groupby(col).agg({values:'mean'}).sort_values(by=values,ascending=True)
     ave_by_col(data_cleaned,'Category','Prices_$')
 ```
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/a66a34b5790e65715fd365b0bd5f2924df1d92e4/averagePrice.png)
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/c6f59125aa4667f4db81cbd9036ba05da023a6c9/files/images/averagePrice.png)
 ---
 ## 10. Business Questions (Analytical & Performance Evaluation)
 Revenue and Category Contribution:
@@ -615,9 +615,9 @@ Revenue and Category Contribution:
    # 1. What is the total potential revenue for each category?
    def sum_by_col(df,col,values):
        return df.groupby(col).agg({values:'sum'}).sort_values(by=values,ascending=True)
-   sum_by_col(data_cleaned,'Category','Prices_$')
+   sum_by_col(data_cleaned,'Category','Prices_$').round(2)
 ```
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/e81dc8e8d4cbd864fbd6ce4b568c6e0d2d136e6c/salesByCategory.png)
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/c6f59125aa4667f4db81cbd9036ba05da023a6c9/files/images/salesByCategory.png)
 ```python
    # 2. Which category contributes the most and least to overall potential revenue?
    print('From Above anaysis:\nContributes Least to potential revenue-Education Category\nContributes High to potential revenue-Work Category')
@@ -631,8 +631,9 @@ Contributes High to potential revenue-Work Category
 ```python
    # 1.What is the average rating for each category?
     #Call function:ave_by_col  
-   ave_by_col(data_cleaned,'Category','Ratings')
+   ave_by_col(data_cleaned,'Category','Ratings').round(2)
 ```
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/1eb533662ee43bf2e5883e460ca4069f6ff7b3fd/files/images/ratings.png)
 ```python
    # 2 What is a maximum rating?
    print(f'Maximum Rating: {data_cleaned['Ratings'].max()}')
@@ -642,12 +643,12 @@ Maximum Rating: 4
    # 3.Which specific laptops in each category have the lowest ratings?
    data_cleaned.query('`Ratings`==1').groupby(['Category','Names']).min()
 ```
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/e81dc8e8d4cbd864fbd6ce4b568c6e0d2d136e6c/lowRating.png)
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/c6f59125aa4667f4db81cbd9036ba05da023a6c9/files/images/lowRating.png)
 ```python
    # 4.Which specific laptops in each category have the highest ratings?
    data_cleaned.query('`Ratings`==4').groupby(['Category','Names']).max()
 ```
-![image alt](https://github.com/Sanele-Zondo/data_projects/blob/e81dc8e8d4cbd864fbd6ce4b568c6e0d2d136e6c/highRating.png)
+![image alt](https://github.com/Sanele-Zondo/data_projects/blob/c6f59125aa4667f4db81cbd9036ba05da023a6c9/files/images/highRating.png)
 ### Revenue Optimization (Pricing Strategy)
 
 Impact of Discounts and Price Changes:
