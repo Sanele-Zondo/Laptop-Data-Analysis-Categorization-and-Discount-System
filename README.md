@@ -425,7 +425,7 @@ if __name__=='__main__':
 ---
 
 ## 7. Model Building
-*Prepare Your Dataset: The dataset (data_cleaned_model) is cleaned and ready. The dataset should have the features: ram_checker, price_checker, screen_size_checker, and Graphics_Card_checker, as well as the target variable Category.*
+*Prepare Your Dataset: The dataset is cleaned and ready. The dataset should have the features: ram_checker, price_checker, screen_size_checker, and Graphics_Card_checker, as well as the target variable Category.*
 ```python
    #Prepare Data[Feature(X) and Target(y)]
    X=data_cleaned_model[['ram_checker','price_checker','screen_size_checker','Graphics_Card_checker']]
@@ -715,6 +715,6 @@ category_data.insert(0,'Category',category_data.index)
 
 ### Solutions Implemented:
 - **Data Cleaning**: Advanced regex techniques were applied to extract and standardize data, ensuring consistency and filling missing values where possible.
-- **Model Tuning**: The categorization model was iteratively refined by adjusting hyperparameters and improving feature engineering to achieve more accurate classifications.
+- **Model Tuning**: The model was improved by changing settings and making the input data (features) better, which helped the model make more accurate predictions.
 
 
