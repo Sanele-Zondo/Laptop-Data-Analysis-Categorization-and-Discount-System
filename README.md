@@ -1,4 +1,4 @@
-# Laptop Data Analysis and Categorization Project
+# Laptop Data Analysis and Discount System
 ![image alt](https://github.com/Sanele-Zondo/data_projects/blob/64df5beb2fa1ab7e58be815afa09cfbe18ea6a0f/files/images/cover.gif)
 ## Table of Contents
 1. [Introduction](#introduction)
