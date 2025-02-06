@@ -707,8 +707,7 @@ category_data.insert(0,'Category',category_data.index)
 ## 11. Insights
 
 - Based on the descriptive analysis, the **Gaming Laptop** category generally commands a higher price due to the demand for high-end specifications.
-- The majority of laptops have a rating of **4**, which is beneficial for the business, as products with higher ratings are more likely to attract buyers.
-- Discount strategies seem to result in almost the same percentage change across all categories.
+- The majority of laptops are have a rating of **1**, which is not beneficial for the business, as products with lower ratings are not likely to attract buyers.
 - **Work laptops** contribute significantly more to the potential revenue compared to other categories.
 
 ## 12. Possible Recommendations
