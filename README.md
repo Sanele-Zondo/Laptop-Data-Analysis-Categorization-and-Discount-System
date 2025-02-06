@@ -414,7 +414,7 @@ Use conditional logic to apply discounts to the Price column:
 #### New Column Created: 
 *Discounted Price – Calculated by applying the discount to the original price.*
 
-*Clearance sale of 15%
+*Clearance sale of 15% for "Old" ['Windows 8.1', 'Win7 Pro 64bit', 'Window 8.1 Pro'] Laptops and Apply 20% Discount:
 ```python
    laptops_clearance_sale=data_cleaned.query("Operating_System in ['Windows 8.1', 'Win7 Pro 64bit', 'Window 8.1 Pro']")
    sale=laptops_clearance_sale['Prices_$'].apply(lambda x: x-x*0.15)
